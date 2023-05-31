@@ -2,13 +2,13 @@ import React from 'react';
 
 const Button = ({text}) => {
   const style = {
-    backgroundColor: '#42b4e6',
+    backgroundColor: '#00B332',
     color: 'white',
     padding: '10px 20px',
-    borderRadius: '4px',
+    borderRadius: '20px',
     border: 'none',
     cursor: 'pointer',
-    width:'200px'
+    width:'127px'
   };
 
   return (
