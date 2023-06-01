@@ -9,7 +9,7 @@ export const Container = styled.div`
   background: #fff;
   border-radius: 10px;
   align-items: center;
-  border: 0.5px solid #d3d3d3;
+  box-shadow: 0 12px 30px -12px rgba(51, 51, 51, 0.36);
   justify-content: center;
 `;
 

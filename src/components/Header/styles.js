@@ -29,9 +29,8 @@ export const MenuOption = styled.div`
   background-color: #fefefe;
   cursor: pointer;
   font-weight: bold;
-  font-size: .875rem;
-    padding: 1.5rem 0;
-}
+  font-size: 0.875rem;
+  padding: 1.5rem 0;
 `;
 
 export const Line = styled.div`
