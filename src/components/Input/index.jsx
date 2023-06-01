@@ -4,11 +4,14 @@ const Input = ({placeholder}) => {
   const style = {
     backgroundColor: '#f2f2f2',
     border: 'none',
-    borderRadius: '4px',
-    padding: '10px',
+    borderRadius: '6px',
+    padding: '15px',
     fontSize: '16px',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    width: '200px',
+    width: '300px',
+    position:'relative',
+    marginBottom:'20px',
+    outline: 'none',
   };
 
   return (

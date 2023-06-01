@@ -1,5 +1,10 @@
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 const SignIn = lazy(() => import("./screens/signin"));
 const Home = lazy(() => import("./screens/home"));

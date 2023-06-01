@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({text}) => {
+const Button = ({text, click}) => {
   const style = {
     backgroundColor: '#00B332',
     color: 'white',
@@ -8,11 +8,12 @@ const Button = ({text}) => {
     borderRadius: '20px',
     border: 'none',
     cursor: 'pointer',
-    width:'127px'
+    width:'127px',
+    fontSize:'16px'
   };
 
   return (
-    <button style={style}>
+    <button style={style} onClick={() => click()}>
      {text}
     </button>
   );

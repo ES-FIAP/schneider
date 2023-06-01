@@ -1,19 +1,17 @@
-import { Container, ContainerMenu, ContainerName, Line, MenuOption } from "./styles";
+import { Container, ContainerMenu, ContainerLogo, Line, MenuOption } from "./styles";
 
 const Header = () => {
   return (
     <Container>
-      <ContainerName>Schenider Social</ContainerName>
-      <ContainerMenu>
+
+        <ContainerLogo/>
+        <MenuOption> Game </MenuOption>
+      
+        <MenuOption> Aprender </MenuOption>
+       
         <MenuOption> Schenider</MenuOption>
-        <Line/>
-        <MenuOption> Schenider</MenuOption>
-        <Line/>
-        <MenuOption> Schenider</MenuOption>
-        <Line/>
+        
         <MenuOption> Sobre o projeto</MenuOption>
-        <Line/>
-      </ContainerMenu>
     </Container>
   );
 };

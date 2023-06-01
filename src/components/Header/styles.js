@@ -1,30 +1,21 @@
 import styled from "styled-components";
-
+import Logo from "../../images/Schneider-Electric-logo-jpg-.png";
 export const Container = styled.div`
   width: 100vw;
   height: 10vh;
   display: flex;
-  flex-direction: column;
-  background-color: #fefefe;
-`;
-export const ContainerName = styled.div`
-  align-items: center;
-  justify-content: center;
-  background-color: #04b600;
-  color: #fff;
-  width: 100%;
-  height: 45%;
-  display: flex;
-  font-size: 1.5vw;
-  font-weight: 600;
-`;
-export const ContainerMenu = styled.div`
-  display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  height: 55%;
+  justify-content: center;
+  background-color: #fefefe;
   align-items: center;
+`;
+export const ContainerLogo = styled.div`
+  background-image: url(${Logo});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10vw;
+  height: 100%;
 `;
 
 export const MenuOption = styled.div`
@@ -32,11 +23,15 @@ export const MenuOption = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 180px;
+
+  position: relative;
+  width: 190px;
   background-color: #fefefe;
   cursor: pointer;
   font-weight: bold;
+  font-size: .875rem;
+    padding: 1.5rem 0;
+}
 `;
 
 export const Line = styled.div`

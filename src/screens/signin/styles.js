@@ -48,6 +48,7 @@ export const LoginWrapper = styled.div`
   width: 30vw;
   overflow: hidden !important;
   background-color: #fefefe;
+  position: relative;
   align-items: flex-start;
 `;
 
@@ -64,20 +65,22 @@ export const LoginTitle = styled.h1`
   color: #00b332;
 `;
 
-export const LoginForm = styled.form`
+export const Form = styled.form`
+  align-items: start;
+  justify-content: center;
+  padding: 5vw;
+  width: 100%;
+  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 300px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
 `;
 
 export const Label = styled.label`
   color: #333333;
   font-size: 16px;
   margin-bottom: 8px;
+  outline: none;
 `;
 
 export const Input = styled.input`
