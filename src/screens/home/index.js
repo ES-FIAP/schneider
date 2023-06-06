@@ -4,7 +4,8 @@ import NewPost from "../../components/NewPost";
 import Profile from "../../components/Profile";
 import { Container, ContainerPage, ContainerPosts } from "./styles";
 import Post from "../../components/Post";
-
+import Homem from "../../images/homem1.jpg";
+import Post1 from "../../images/custa1kgcarne.jpg";
 const Home = () => {
   const tutorialSteps = [
     <div>
@@ -27,7 +28,13 @@ const Home = () => {
         <Profile></Profile>
         <ContainerPosts>
           <NewPost />
-          <Post />
+          <Post
+            perfilImage={Homem}
+            Text={
+              "Olá amigos, recentemente comecei a me preocupar com minha dieta e como ela impacta o mundo em que vivemos"
+            }
+            ImagePost={Post1}
+          />
         </ContainerPosts>
         <Tour steps={tutorialSteps} />
       </Container>

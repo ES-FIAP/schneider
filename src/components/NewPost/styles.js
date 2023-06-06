@@ -15,6 +15,7 @@ export const PostCreation = styled.div`
   padding-right: 10px;
   width: 500px;
   margin-bottom: 2vh;
+  border-radius: 10px;
 `;
 
 export const FlexDiv = styled.div`

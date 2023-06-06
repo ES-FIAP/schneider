@@ -1,38 +1,50 @@
 import React, { useState } from "react";
-import { Footer, PostContainer } from "./styles";
-import styled from "styled-components"
-import { Modal, Button } from "react-bootstrap";
+import {
+  ContainerText,
+  Footer,
+  PostContainer,
+  HeaderContainer,
+  ButtonAction
+} from "./styles";
+import styled from "styled-components";
+import { Button } from "react-bootstrap";
 
-const Post = ({img}) => {
-
-  const ImgContainer = styled.div`
-  width: 70px;
-  height: 60px;
-  border-radius: 50px;
-  background-image: url(${img});
-  background-size: cover;
-  background-position: center;
-`;
-
+const Post = ({ perfilImage, ImagePost, Text }) => {
+  const PerfilImage = styled.div`
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-image: url(${perfilImage});
+    background-size: cover;
+    background-position: center;
+  `;
+  const ContainerImage = styled.div`
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    background-image: url(${ImagePost});
+    background-size: cover;
+    background-position: center;
+  `;
   return (
     <PostContainer>
-      <Button
-        style={{
-          backgroundColor: "#3dcd58",
-          color: "#fff",
-          fontWeight: "500",
-          fontSize: "20px",
-          marginTop: "20px",
-          width: "330px",
-          border: "none",
-        }}
-      >
-        Publicar
-      </Button>
+      <HeaderContainer>
+        <PerfilImage />
+        <ContainerText>{Text}</ContainerText>
+      </HeaderContainer>
+
+      <ContainerImage />
       <Footer>
-        <i class="bi bi-hand-thumbs-up"></i> Gostei
-        <i class="bi bi-chat-text"></i> Comentar
-        <i class="bi bi-share"></i> Compartilhar
+        <ButtonAction>
+          <i class="bi bi-hand-thumbs-up"></i> Gostei
+        </ButtonAction>
+        <ButtonAction>
+          <i class="bi bi-chat-text"></i> Comentar
+        </ButtonAction>
+
+        <ButtonAction>
+          <i class="bi bi-share"></i> Compartilhar
+        </ButtonAction>
       </Footer>
     </PostContainer>
   );

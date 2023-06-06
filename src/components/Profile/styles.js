@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import StarImg from "../../images/starBlue.svg";
-import AvatarImg from "../../images/avatar.png";
+import AvatarImg from "../../images/mulher1.jpg";
 export const Container = styled.div`
   width: 13vw;
   height: 35vh;
