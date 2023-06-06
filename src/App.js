@@ -8,12 +8,14 @@ import {
 
 const SignIn = lazy(() => import("./screens/signin"));
 const Home = lazy(() => import("./screens/home"));
+const About = lazy(() => import("./screens/about"));
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Suspense>
   </Router>
