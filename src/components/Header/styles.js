@@ -16,11 +16,13 @@ export const ContainerLogo = styled.div`
   background-repeat: no-repeat;
   width: 10vw;
   height: 100%;
+  right: 10%;
 `;
 
 export const MenuOption = styled.div`
-  color: #04b600;
+  color: #9fa0a4;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -31,6 +33,9 @@ export const MenuOption = styled.div`
   font-weight: bold;
   font-size: 0.875rem;
   padding: 1.5rem 0;
+  :hover {
+    color: #04b600;
+  }
 `;
 
 export const Line = styled.div`

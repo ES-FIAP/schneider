@@ -1,17 +1,37 @@
 import Header from "../../components/Header";
-import Post from "../../components/Post";
+import Tour from "../../components/Tour/index";
+import NewPost from "../../components/NewPost";
 import Profile from "../../components/Profile";
-import { Container } from "./styles";
+import { Container, ContainerPage, ContainerPosts } from "./styles";
+import Post from "../../components/Post";
 
 const Home = () => {
-  return (
+  const tutorialSteps = [
     <div>
+      <h2>Passo 1</h2>
+      <p>Esta é a primeira etapa do tutorial.</p>
+    </div>,
+    <div>
+      <h2>Passo 2</h2>
+      <p>Esta é a segunda etapa do tutorial.</p>
+    </div>,
+    <div>
+      <h2>Passo 3</h2>
+      <p>Esta é a terceira etapa do tutorial.</p>
+    </div>,
+  ];
+  return (
+    <ContainerPage>
       <Header></Header>
       <Container>
         <Profile></Profile>
-        <Post />
+        <ContainerPosts>
+          <NewPost />
+          <Post />
+        </ContainerPosts>
+        <Tour steps={tutorialSteps} />
       </Container>
-    </div>
+    </ContainerPage>
   );
 };
 export default Home;

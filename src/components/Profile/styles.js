@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import StarImg from "../../images/star.png";
+import StarImg from "../../images/starBlue.svg";
 import AvatarImg from "../../images/avatar.png";
 export const Container = styled.div`
   width: 13vw;
-  height: 30vh;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -14,10 +14,10 @@ export const Container = styled.div`
 `;
 
 export const Star = styled.div`
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   background-image: url(${StarImg});
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   margin: 10px;
 `;

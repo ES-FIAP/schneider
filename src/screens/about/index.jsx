@@ -7,5 +7,4 @@ const About = () => (
       </Routes>
     </Suspense>
   </Router>
-);
-export default About;
+)

@@ -34,7 +34,7 @@ export const Backdrop = styled.div`
   bottom: 0px;
   z-index: 2;
   height: 100vh;
-  width: 70vw;
+  width: 60vw;
   background: #19272ecc;
   opacity: 0.4;
 `;
