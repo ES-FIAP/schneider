@@ -9,7 +9,7 @@ import {
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 
-const Post = ({ perfilImage, ImagePost, Text }) => {
+const Post = ({ perfilImage, ImagePost, Text,Name }) => {
   const PerfilImage = styled.div`
     width: 50px;
     height: 50px;
@@ -30,8 +30,9 @@ const Post = ({ perfilImage, ImagePost, Text }) => {
     <PostContainer>
       <HeaderContainer>
         <PerfilImage />
-        <ContainerText>{Text}</ContainerText>
+        {Name}
       </HeaderContainer>
+        <ContainerText>{Text}</ContainerText>
 
       <ContainerImage />
       <Footer>

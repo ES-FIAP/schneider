@@ -34,6 +34,7 @@ const Home = () => {
               "Olá amigos, recentemente comecei a me preocupar com minha dieta e como ela impacta o mundo em que vivemos"
             }
             ImagePost={Post1}
+            Name={"Thiago Santos"}
           />
         </ContainerPosts>
         <Tour steps={tutorialSteps} />
