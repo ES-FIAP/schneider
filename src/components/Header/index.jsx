@@ -22,7 +22,7 @@ const Header = () => {
         <i class="bi bi-book"style={{ fontSize:"25px"}}  /> Aprender
       </MenuOption>
 
-      <MenuOption onClick={() => Navigate("/home")}> <i class="bi bi-person-circle" style={{ fontSize:"25px"}} />  Perfil </MenuOption>
+      <MenuOption onClick={() => Navigate("/profile")}> <i class="bi bi-person-circle" style={{ fontSize:"25px"}} />  Perfil </MenuOption>
 
       <MenuOption onClick={() => Navigate("/about")}>
         <i class="bi bi-card-text" style={{ fontSize:"25px"}} /> Sobre o projeto

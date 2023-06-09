@@ -32,7 +32,7 @@ export const MenuOption = styled.div`
   cursor: pointer;
   font-weight: bold;
   font-size: 0.875rem;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   :hover {
     color: #04b600;
   }
