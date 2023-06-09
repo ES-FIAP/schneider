@@ -1,62 +1,104 @@
-import Header from "../../components/Header"
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import Carousel from 'react-bootstrap/Carousel';
-
+import Header from "../../components/Header";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import {
+  Container,
+  HistoryContainer,
+  Title,
+  HistoryText,
+  HistorySubtitle,
+  HistoryTitle,
+  ResourceItem,
+  ResourcesContainer,
+  ResourcesTitle,
+  TeamContainer,
+  TeamMember,
+  TeamTitle,
+  CardContainer,
+  GifImage,
+} from "./styles";
+import Carousel  from "react-bootstrap/Carousel";
+import gif from '../../images/gifSustentabilidade.gif'
 const About = () => {
   return (
-    
-  <div className="centered">
-    
-    <Header/>
-    
-    <h1>Máximo aproveitamento
-      de nossa energia e de
-nossos recursos</h1>
-    <img src="https://s2.glbimg.com/51ae4szwegOBfhz70irESACnqxg=/smart/e.glbimg.com/og/ed/f/original/2021/02/12/noruega-tera-fabrica-de-moveis-mais-sustentavel-do-mundo_5.jpg" alt="" />
-    <h4>Nosso propósito é possibilitar o máximo
-aproveitamento de nossa energia e de
-nossos recursos, garantindo progresso e
-sustentabilidade para todos</h4>
-<img src="https://s5.static.brasilescola.uol.com.br/be/2022/10/vista-floresta-amazonica.jpg" alt="" />
-    <p>Na Schneider, chamamos isto de  
-      <img src="\src\images\LifeIsOn.png" alt="Life Is On"/>
-    </p>
-
-    <p>A eletricidade é o melhor e mais eficiente vetor de descarbonização. Junto com a abordagem da economia circular, alcançaremos (enfase)| um impacto positivo no clima como parte dos Objetivos de Desenvolvimento Sustentável das Nações Unidas \ </p>
-
-    <h4>Nossa missão é ser o seu parceiro digital para a sustentabilidade e a eficiência</h4>
-  
-
-    <div>
-      <h2>A Nossa História.</h2>
-      <h5>O Seculo 19</h5>
-      <span>Os irmãos Schneider investem nas fundições em Le Creusot e tornam-se participantes importantes no setor de aço e máquinas. Em breve, a Schneider & Cie. entra no mercado emergente de eletricidade</span>
-      <h4>Nossa Grande aventura</h4>
-      <span>Nossa empresa nasceu durante a primeira Revolução Industrial. Praticamente 180 anos depois e por meio de uma dedicação duradoura, expertise e força combinada das empresas adquiridas, continuamos a fornecer inovação em todos níveis.</span>
-    </div>
-    
-
-    <div>
-    <div>
-      <h4>Schneider Electric</h4>
-      <Carousel>
+    <Container>
+      <Header />
+      <GifImage src={gif} alt="Looping GIF"/>
+      <Title>Máximo aproveitamento de nossa energia e de nossos recursos</Title>
+      <div
+        style={{
+          display: "flex",
+          minWidth: "70vw",
+          justifyContent: "space-around",
+          marginTop:'50vh'
+        }}
+      >
+        <CardContainer>
+          <TeamContainer>
+            <TeamTitle>Equipe de Desenvolvimento</TeamTitle>
+            <TeamMember>
+              <strong>Julia Castro Nóbrega </strong> -Desenvolvimento da Ideia e
+              Site
+            </TeamMember>
+            <TeamMember>
+              <strong>Thiago </strong> - Criação de slides e pitch
+            </TeamMember>
+            <TeamMember>
+              <strong>Roger</strong> - Desenvolvimento do Site
+            </TeamMember>
+            <TeamMember>
+              <strong>João </strong> - Design e pitch
+            </TeamMember>
+            <TeamMember>
+              <strong>Leandro Freire </strong> - Desenvolvimento da Ideia e Design
+            </TeamMember>
+          </TeamContainer>
+        </CardContainer>
+        <CardContainer>
+          <ResourcesContainer>
+            <ResourcesTitle>Recursos Utilizados no Projeto</ResourcesTitle>
+            <ResourceItem>Desenvolvimento Web utilizando React</ResourceItem>
+            <ResourceItem>Styled-Components</ResourceItem>
+            <ResourceItem>
+              Conhecimentos sobre ESG (Environmental, Social, and Governance)
+            </ResourceItem>
+          </ResourcesContainer>
+        </CardContainer>
+      </div>
+       <HistoryContainer>
+        <HistoryTitle>A Nossa História.</HistoryTitle>
+        <HistorySubtitle>O Século 19</HistorySubtitle>
+        <HistoryText>
+          Os irmãos Schneider investem nas fundições em Le Creusot e tornam-se
+          participantes importantes no setor de aço e máquinas. Em breve, a
+          Schneider & Cie. entra no mercado emergente de eletricidade.
+        </HistoryText>
+        <HistorySubtitle>Nossa Grande Aventura</HistorySubtitle>
+        <HistoryText>
+          Nossa empresa nasceu durante a primeira Revolução Industrial.
+          Praticamente 180 anos depois e por meio de uma dedicação duradoura,
+          expertise e força combinada das empresas adquiridas, continuamos a
+          fornecer inovação em todos os níveis.
+        </HistoryText>
+      </HistoryContainer>
+            <Carousel style={{ width:'60%', height:'20%', position:'relative', left:'20%', paddingBottom:'50px'}}>
         <Carousel.Item>
           <img
-            src="https://static8.depositphotos.com/1030334/1045/i/600/depositphotos_10457072-stock-photo-forest.jpg"
+            src="https://www.se.com/br/pt/assets/custom_logo/Schneider-Electric-Social.png"
             alt="Primeira "
+            style={{ width:'100%'}}
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src="https://ogimg.infoglobo.com.br/economia/23269599-013-da9/FT1086A/66042903.jpg"
+            src="https://www.se.com/ww/en/assets/v2/564/media/244384/Innovation%20Hub%20Main-banner-IC-1920x1080.jpg"
             alt="Segunda Imagem"
+            style={{ width:'100%'}}
           />
         </Carousel.Item>
       </Carousel>
-    </div>
-    </div>
-  </div>)
-  }
-  
-export default About
+    </Container>
+  );
+};
+
+export default About;
