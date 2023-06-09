@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import ImageBackground from "../../images/backgroundGamer.jpg";
-import FoodIMG from "../../images/maca.jpg";
+import GlassIMG from "../../images/glass.png";
+import PlasticIMG from "../../images/plastic.jpg";
+import PaperIMG from "../../images/journal.png";
 import BlueTrash from "../../images/trashblue.jpg";
 import RedTrash from "../../images/trashred.jpg";
 import YellowTrash from "../../images/trashyellow.jpg";
@@ -57,6 +59,13 @@ export const Title = styled.div`
   margin-top: 10vh;
 `;
 
+export const TitleModal = styled.div`
+  font-size: 1.5vw;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #3f964f;
+  letter-spacing: 2px;
+`;
+
 export const Options = styled.div`
   display: flex;
   flex-direction: row;
@@ -65,13 +74,31 @@ export const Options = styled.div`
   width: 35%;
 `;
 
-export const Food = styled.div`
+export const Glass = styled.div`
+  width: 430px;
+  height: 390px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(${GlassIMG});
+`;
+
+export const Plastic = styled.div`
   width: 430px;
   height: 390px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(${FoodIMG});
+  background-image: url(${PlasticIMG});
+`;
+
+export const Paper = styled.div`
+  width: 430px;
+  height: 390px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(${PaperIMG});
 `;
 
 export const TrashRed = styled.div`
