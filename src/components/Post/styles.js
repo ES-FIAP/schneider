@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PostContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-left: 20px;
   background-color: #fefefe;
   box-shadow: 0 12px 30px -12px rgba(51, 51, 51, 0.36);
@@ -17,20 +17,25 @@ export const PostContainer = styled.div`
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  width: 250px;
+  position: relative;
+  padding: 20px;
+  justify-content: space-around;
 `;
 
 export const Footer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-top: 10px;
+  padding: 10px;
   width: 100%;
 `;
 
 export const ContainerText = styled.div`
-  width: 85%;
+  width: 90%;
   height: 20%;
-  padding: 10px;
+  padding-left: 25px;
 `;
 
 export const ButtonAction = styled.div`

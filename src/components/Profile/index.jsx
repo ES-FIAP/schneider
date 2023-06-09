@@ -14,8 +14,8 @@ const Profile = () => {
   return (
     <Container>
       <ImgContainer />
-      <NameContainer>Julia Castro Nóbrega</NameContainer>
-      <DescriptionContainer> Desenvolvedora Full-stack</DescriptionContainer>
+      <NameContainer>John Do Santos</NameContainer>
+      <DescriptionContainer>Gerente de Marketing</DescriptionContainer>
       <Line />
       <div
         style={{

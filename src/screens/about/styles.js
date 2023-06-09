@@ -6,7 +6,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   font-size: 60px;
 
-  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: fantasy;
   color: #fafafa;
   letter-spacing: 2px;
   margin-top: 5vh;
@@ -77,7 +77,7 @@ export const TeamContainer = styled.div`
 
 export const TeamTitle = styled.h2`
   font-size: 1.8vw;
-  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: fantasy, "Arial Narrow Bold", sans-serif;
   color: #42b4e6;
   letter-spacing: 1px;
 `;

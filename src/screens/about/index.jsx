@@ -41,13 +41,13 @@ const About = () => {
               Site
             </TeamMember>
             <TeamMember>
-              <strong>Thiago </strong> - Criação de slides e pitch
+              <strong>Thiago Batista  </strong> - Criação de slides e pitch
             </TeamMember>
             <TeamMember>
-              <strong>Roger</strong> - Desenvolvimento do Site
+              <strong>ROGER VIANA </strong> - Desenvolvimento do Site
             </TeamMember>
             <TeamMember>
-              <strong>João </strong> - Design e pitch
+              <strong>João Victor Silva  </strong> - Design e pitch
             </TeamMember>
             <TeamMember>
               <strong>Leandro Freire </strong> - Desenvolvimento da Ideia e Design

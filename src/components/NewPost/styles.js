@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AvatarImg from "../../images/avatar.png";
+import AvatarImg from "../../images/homem2.jpg";
 
 export const PostCreation = styled.div`
   display: flex;

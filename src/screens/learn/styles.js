@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Gradient from "../../images/Hydrogen.jpg";
+
 export const CardContainer = styled.div`
   width: 400px;
   background-color: #ffffff;

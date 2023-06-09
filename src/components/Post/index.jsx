@@ -4,12 +4,12 @@ import {
   Footer,
   PostContainer,
   HeaderContainer,
-  ButtonAction
+  ButtonAction,
 } from "./styles";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 
-const Post = ({ perfilImage, ImagePost, Text,Name }) => {
+const Post = ({ perfilImage, ImagePost, Text, Name }) => {
   const PerfilImage = styled.div`
     width: 50px;
     height: 50px;
@@ -19,20 +19,21 @@ const Post = ({ perfilImage, ImagePost, Text,Name }) => {
     background-position: center;
   `;
   const ContainerImage = styled.div`
-    width: 350px;
-    height: 250px;
+    width: 450px;
+    height: 350px;
     border-radius: 20px;
     background-image: url(${ImagePost});
     background-size: cover;
     background-position: center;
+
   `;
   return (
     <PostContainer>
       <HeaderContainer>
         <PerfilImage />
-        {Name}
+        <strong>{Name}</strong>
       </HeaderContainer>
-        <ContainerText>{Text}</ContainerText>
+      <ContainerText>{Text}</ContainerText>
 
       <ContainerImage />
       <Footer>
