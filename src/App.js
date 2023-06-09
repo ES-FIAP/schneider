@@ -12,7 +12,7 @@ const Home = lazy(() => import("./screens/home"));
 const About = lazy(() => import("./screens/about"));
 const Game = lazy(() => import("./screens/game"));
 const Learn = lazy(() => import("./screens/learn"));
-
+const Profile = lazy(() => import("./screens/Profile"));
 const Loader = styled.div`
   background-image: url(${ImageLoader});
   background-size: cover;
@@ -36,6 +36,7 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/game" element={<Game />} />
         <Route path="/Learn" element={<Learn />} />
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </Suspense>
   </Router>
