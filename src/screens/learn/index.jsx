@@ -30,21 +30,20 @@ const Learn = () => {
       title: "Oque é sustentabilidade",
       videoUrl: "https://www.youtube.com/embed/vG4WThkdliI",
       description:
-        "Learn about the importance of renewable energy sources and their positive impact on the environment.",
+        "Conversa com Especialista.",
     },
     {
       title: "A sustentabilidade e a digitalização ",
       videoUrl: "https://www.youtube.com/embed/ml6ADoI03js",
       description:
-        "Discover how recycling and proper waste management can help reduce pollution and conserve resources.",
+        "Conversa com Especialista.",
     },
     {
       title: "Serviços e projetos de sustentabilidade",
       videoUrl: "https://www.youtube.com/embed/6YRGA-I6-Mk",
       description:
-        "Understand the significance of water conservation and tips for reducing water consumption in daily life.",
+        "Conversa com Especialista.",
     },
-    // Add more topics as desired
   ];
   const sustainabilityTopics2row = [
     {

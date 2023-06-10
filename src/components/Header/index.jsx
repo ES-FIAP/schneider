@@ -1,8 +1,6 @@
 import {
   Container,
-  ContainerMenu,
   ContainerLogo,
-  Line,
   MenuOption,
 } from "./styles";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +24,9 @@ const Header = () => {
 
       <MenuOption onClick={() => Navigate("/about")}>
         <i class="bi bi-card-text" style={{ fontSize:"25px"}} /> Sobre o projeto
+      </MenuOption>
+      <MenuOption onClick={() => Navigate("/about")}>
+        <i class="bi bi-play-fill" style={{ fontSize:"25px"}} /> Video Pitch
       </MenuOption>
        <MenuOption onClick={() => Navigate("/")}>
         <i class="bi bi-door-open" style={{ fontSize:"25px"}} /> Sair

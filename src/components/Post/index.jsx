@@ -19,8 +19,9 @@ const Post = ({ perfilImage, ImagePost, Text, Name }) => {
     background-position: center;
   `;
   const ContainerImage = styled.div`
-    width: 450px;
-    height: 350px;
+    width: 350px;
+    height: 250px;
+    margin-left: 10%;
     border-radius: 20px;
     background-image: url(${ImagePost});
     background-size: cover;

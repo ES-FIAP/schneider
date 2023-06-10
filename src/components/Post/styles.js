@@ -12,6 +12,7 @@ export const PostContainer = styled.div`
   border-radius: 10px;
   width: 500px;
   padding: 10px;
+  margin-bottom: 30px;
 `;
 
 export const HeaderContainer = styled.div`
