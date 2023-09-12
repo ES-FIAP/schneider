@@ -2,7 +2,13 @@ import Header from "../../components/Header";
 import Tour from "../../components/Tour/index";
 import NewPost from "../../components/NewPost";
 import Profile from "../../components/Profile";
-import { Container, ContainerPage, ContainerPosts, Card } from "./styles";
+import {
+  Container,
+  ContainerPage,
+  ContainerPosts,
+  Card,
+  ContainerRight,
+} from "./styles";
 import Post from "../../components/Post";
 import Homem from "../../images/homem1.jpg";
 import mulher1 from "../../images/mulher1.jpg";
@@ -81,35 +87,44 @@ const Home = () => {
             Name={"Verônica Lima"}
           />
         </ContainerPosts>
-        <Card
-          onClick={() => Navigate("/game")}
-          style={{ textAlign: "center", height: "350px", cursor: "pointer" }}
-        >
-          <p
-            style={{
-              fontFamily: "fantasy",
-              letterSpacing: "2px",
-              fontSize: "25px",
-              color: "#42b4e6",
-            }}
+        <ContainerRight>
+          <Card
+            onClick={() => Navigate("/game")}
+            style={{ textAlign: "center", height: "350px", cursor: "pointer" }}
           >
-            Teste seus conhecimentos
-          </p>
-          <p
-            style={{
-              fontFamily: "fantasy",
-              letterSpacing: "2px",
-              fontSize: "20px",
-              color: "#fa942e",
-            }}
+            <p
+              style={{
+                fontFamily: "fantasy",
+                letterSpacing: "2px",
+                fontSize: "25px",
+                color: "#42b4e6",
+              }}
+            >
+              Teste seus conhecimentos
+            </p>
+            <p
+              style={{
+                fontFamily: "fantasy",
+                letterSpacing: "2px",
+                fontSize: "20px",
+                color: "#fa942e",
+              }}
+            >
+              Game Coleta Seletiva
+            </p>
+            <img
+              src={gameIMG}
+              style={{ borderRadius: "10px", width: "100%", height: "60%" }}
+            />
+          </Card>
+
+          <Card
+            onClick={() => Navigate("/calculator")}
+            style={{ textAlign: "center", height: "350px", cursor: "pointer" }}
           >
-            Game Coleta Seletiva
-          </p>
-          <img
-            src={gameIMG}
-            style={{ borderRadius: "10px", width: "100%", height: "60%" }}
-          />
-        </Card>
+            Calculadora
+          </Card>
+        </ContainerRight>
         <Tour steps={tutorialSteps} />
       </Container>
     </ContainerPage>

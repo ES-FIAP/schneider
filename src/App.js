@@ -5,23 +5,18 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+
 import styled from "styled-components";
-import gif from "./images/gifSustentabilidade.gif";
+
 const SignIn = lazy(() => import("./screens/signin"));
 const Home = lazy(() => import("./screens/home"));
 const About = lazy(() => import("./screens/about"));
 const Game = lazy(() => import("./screens/game"));
 const Learn = lazy(() => import("./screens/learn"));
 const Profile = lazy(() => import("./screens/Profile"));
-const Image = styled.img`
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: flex;
-`;
+const Calculator = lazy(() => import("./screens/calculator"));
+const Calendar = lazy(() => import("./screens/calendar"));
+
 const Title = styled.div`
   font-size: 4vw;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -74,6 +69,8 @@ const App = () => (
         <Route path="/game" element={<Game />} />
         <Route path="/Learn" element={<Learn />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/Calculator" element={<Calculator />} />
+        <Route path="/Calendar" element={<Calendar />} />
       </Routes>
     </Suspense>
   </Router>

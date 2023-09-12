@@ -22,6 +22,11 @@ export const ContainerPosts = styled.div`
   width: 500px;
   margin-right: 50px;
 `;
+export const ContainerRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
 export const Card = styled.div`
   width: 300px;
   height: 250px;

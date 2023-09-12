@@ -25,9 +25,11 @@ const Header = () => {
       <MenuOption onClick={() => Navigate("/about")}>
         <i class="bi bi-card-text" style={{ fontSize:"25px"}} /> Sobre o projeto
       </MenuOption>
-      <MenuOption onClick={() => Navigate("/about")}>
+      <a href="https://youtu.be/F1Nv6QSONIE" target="_blank">   <MenuOption  >
         <i class="bi bi-play-fill" style={{ fontSize:"25px"}} /> Video Pitch
-      </MenuOption>
+      </MenuOption></a>
+
+   
        <MenuOption onClick={() => Navigate("/")}>
         <i class="bi bi-door-open" style={{ fontSize:"25px"}} /> Sair
       </MenuOption>
