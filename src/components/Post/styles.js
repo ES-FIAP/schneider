@@ -10,7 +10,7 @@ export const PostContainer = styled.div`
   justify-content: space-between;
 
   border-radius: 10px;
-  width: 500px;
+  width: 550px;
   padding: 10px;
   margin-bottom: 30px;
 `;
@@ -23,6 +23,12 @@ export const HeaderContainer = styled.div`
   position: relative;
   padding: 20px;
   justify-content: space-around;
+`;
+
+export const NameText = styled.p`
+  font-weight: 500;
+  font-size: 1vw;
+  color: #4c4c4c;
 `;
 
 export const Footer = styled.div`

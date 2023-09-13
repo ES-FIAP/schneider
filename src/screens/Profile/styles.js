@@ -20,7 +20,7 @@ export const ProfileName = styled.h2`
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #fafafa;
+  color: #f1f5f9;
   margin-left: 20px;
 `;
 

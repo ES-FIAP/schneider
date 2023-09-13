@@ -27,7 +27,7 @@ export const ButtonStart = styled.div`
   border-radius: 40px;
   background-color: green;
   text-align: center;
-  color: #fafafa;
+  color: #f1f5f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ export const ButtonInstructions = styled.div`
   border-radius: 40px;
   background-color: #fa942e;
   text-align: center;
-  color: #fafafa;
+  color: #f1f5f9;
   display: flex;
   justify-content: center;
   align-items: center;

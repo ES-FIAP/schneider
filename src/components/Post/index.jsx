@@ -5,6 +5,7 @@ import {
   PostContainer,
   HeaderContainer,
   ButtonAction,
+  NameText
 } from "./styles";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
@@ -32,7 +33,7 @@ const Post = ({ perfilImage, ImagePost, Text, Name }) => {
     <PostContainer>
       <HeaderContainer>
         <PerfilImage />
-        <strong>{Name}</strong>
+        <NameText>{Name}</NameText>
       </HeaderContainer>
       <ContainerText>{Text}</ContainerText>
 

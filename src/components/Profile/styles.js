@@ -2,8 +2,8 @@ import styled from "styled-components";
 import StarImg from "../../images/starBlue.svg";
 import AvatarImg from "../../images/homem2.jpg";
 export const Container = styled.div`
-  width: 13vw;
-  height: 35vh;
+  width: 16vw;
+  height: 37.5vh;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -11,6 +11,7 @@ export const Container = styled.div`
   align-items: center;
   box-shadow: 0 12px 30px -12px rgba(51, 51, 51, 0.36);
   justify-content: center;
+  margin-bottom: 2vh;
 `;
 
 export const Star = styled.div`
@@ -23,10 +24,19 @@ export const Star = styled.div`
 `;
 export const NameContainer = styled.div`
   width: 100%;
-  font-size: 16px;
-  color: #000;
+  font-size: 21px;
+  color: #515151;
   text-align: center;
   padding-top: 5px;
+  font-weight: 500;
+`;
+export const SubTitle = styled.p`
+  font-size: 21px;
+  color: #515151;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 `;
 export const XPContainer = styled.div`
   font-family: "Arial", sans-serif;

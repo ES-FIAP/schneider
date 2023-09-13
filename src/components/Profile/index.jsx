@@ -7,7 +7,7 @@ import {
   Line,
   NameContainer,
   Star,
-  XPContainer,
+  SubTitle
 } from "./styles";
 
 const Profile = () => {
@@ -35,16 +35,30 @@ const Profile = () => {
             justifyContent: "start",
           }}
         >
-          <Star /> Pontuação
+          <Star />
+          <SubTitle>Pontuação</SubTitle>
         </div>
         <ProgressbarComponent percentage={60} />
-        <div style={{ display: "flex", flexDirection: "column" , width:'100%', padding:"5px"}}>
-          <div style={{ display: "flex", flexDirection: "row" , justifyContent:'start'}}>
-            <span style={{ fontWeight: "bold", marginRight:"10px"}}>2</span>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            padding: "5px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "start",
+            }}
+          >
+            <span style={{ fontWeight: "bold", marginRight: "10px" }}>2</span>
             Postagens
           </div>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <span style={{ fontWeight: "bold" , marginRight:"10px"}}>5</span>
+            <span style={{ fontWeight: "bold", marginRight: "10px" }}>5</span>
             Compartilhamentos
           </div>
         </div>

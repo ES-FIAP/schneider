@@ -7,7 +7,7 @@ export const Title = styled.h1`
   font-size: 60px;
 
   font-family: fantasy;
-  color: #fafafa;
+  color: #f1f5f9;
   letter-spacing: 2px;
   margin-top: 5vh;
 `;

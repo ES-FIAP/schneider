@@ -13,7 +13,7 @@ export const PostCreation = styled.div`
   height: 20vh;
   padding-left: 10px;
   padding-right: 10px;
-  width: 500px;
+  width: 550px;
   margin-bottom: 2vh;
   border-radius: 10px;
 `;
@@ -59,7 +59,7 @@ export const PostOptionButton = styled.button`
   font-weight: 600;
   border: none;
   border-radius: 5px;
-  background-color: #fafafa;
+  background-color: #f1f5f9;
   cursor: pointer;
   justify-content: space-around;
   display: flex;

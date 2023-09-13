@@ -8,7 +8,7 @@ const Button = ({text, click}) => {
     borderRadius: '20px',
     border: 'none',
     cursor: 'pointer',
-    width:'127px',
+    margin: '10px',
     fontSize:'16px'
   };
 

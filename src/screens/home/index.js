@@ -8,6 +8,7 @@ import {
   ContainerPosts,
   Card,
   ContainerRight,
+  SubTitle,
 } from "./styles";
 import Post from "../../components/Post";
 import Homem from "../../images/homem1.jpg";
@@ -59,7 +60,13 @@ const Home = () => {
     <ContainerPage>
       <Header></Header>
       <Container>
-        <Profile></Profile>
+        <ContainerRight>
+          <Profile></Profile>
+          <Card>
+            <SubTitle>Recentes</SubTitle>
+            <SubTitle>Eventos</SubTitle>
+          </Card>
+        </ContainerRight>
         <ContainerPosts>
           <NewPost />
           <Post
@@ -122,7 +129,7 @@ const Home = () => {
             onClick={() => Navigate("/calculator")}
             style={{ textAlign: "center", height: "350px", cursor: "pointer" }}
           >
-            Calculadora
+            <SubTitle style={{ color: "#3dcd58" }}>EcoVeg Calculadora</SubTitle>
           </Card>
         </ContainerRight>
         <Tour steps={tutorialSteps} />

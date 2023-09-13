@@ -48,6 +48,11 @@ const LoginPage = () => {
             text={"Acessar"}
             click={() => setLoggedIn(true)}
           />
+          <Button
+            type="submit"
+            text={"Primeiro Acesso"}
+            click={() => setLoggedIn(true)}
+          />
         </Form>
       </LoginWrapper>
       <ContainerImage />

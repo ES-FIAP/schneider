@@ -12,14 +12,14 @@ export const Container = styled.div`
   min-height: 90vh;
 `;
 export const ContainerPage = styled.div`
-  background: #fafafa;
+  background: #f1f5f9;
   width: 100%;
   min-height: 90vh;
 `;
 export const ContainerPosts = styled.div`
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 550px;
   margin-right: 50px;
 `;
 export const ContainerRight = styled.div`
@@ -40,4 +40,9 @@ export const Card = styled.div`
   &:hover {
     transform: translateY(-5px);
   }
+`;
+export const SubTitle = styled.p`
+  font-size: 21px;
+  color: #515151;
+  font-weight: 500;
 `;
