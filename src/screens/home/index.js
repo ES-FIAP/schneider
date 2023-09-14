@@ -62,20 +62,37 @@ const Home = () => {
       <Container>
         <ContainerRight>
           <Profile></Profile>
-          <Card>
-            <SubTitle>Recentes</SubTitle>
+          <Card style={{ height: "600px" }}>
             <SubTitle>Eventos</SubTitle>
+            <p>
+              <strong>Innovation Summit South America 2021</strong> - 30/10/2023
+            </p>
+            <img
+              style={{ borderRadius: "4px", width: "100%", height: "30%" }}
+              src="https://eu.eventscloud.com/file_uploads/23b7e5f0846c9d0f8ac57c1985e15a95_998-21519431_Innovation-Summit-2021_GMA_KV_480x280_event-name.jpg"
+            />
+            <p style={{ marginTop: "5px" }}>
+              <strong> Innovation Talk </strong> - 30/09/2023
+            </p>
+            <img
+              style={{ borderRadius: "4px", width: "100%", height: "30%" }}
+              src="https://www.se.com/br/pt/assets/v2/547/media/14476/1200/2018_SchneiderElectric_HannoverMesse__1511-IC-490x280.jpg"
+            />
           </Card>
         </ContainerRight>
         <ContainerPosts>
           <NewPost />
           <Post
-            perfilImage={senhora}
+            perfilImage={
+              "https://media.istockphoto.com/id/1289220545/pt/foto/beautiful-woman-smiling-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=J8IOft88XNXaMMjGBZUbbUVPPiDkxXO2uX5lxuWFRbM="
+            }
             Text={
               "Mostrei o jogo coleta seletiva para meu filho, ele amou e conseguiu acerta 2. em breve ele acertará todos. Muito Orgulho"
             }
-            ImagePost={gameFail}
-            Name={"Nilza Almeida"}
+            ImagePost={
+              "https://media.istockphoto.com/id/1139306352/pt/foto/volunteers-collecting-garbage.jpg?s=612x612&w=0&k=20&c=YHM954ZpufTy8BIZDEhiUWA_m1fjmtu1BLbcuFMogHs="
+            }
+            Name={"Manuela Guimaraês"}
           />
           <Post
             perfilImage={Homem}
@@ -99,16 +116,14 @@ const Home = () => {
             onClick={() => Navigate("/game")}
             style={{ textAlign: "center", height: "350px", cursor: "pointer" }}
           >
-            <p
+            <SubTitle
               style={{
-                fontFamily: "fantasy",
-                letterSpacing: "2px",
                 fontSize: "25px",
                 color: "#42b4e6",
               }}
             >
               Teste seus conhecimentos
-            </p>
+            </SubTitle>
             <p
               style={{
                 fontFamily: "fantasy",
@@ -130,6 +145,12 @@ const Home = () => {
             style={{ textAlign: "center", height: "350px", cursor: "pointer" }}
           >
             <SubTitle style={{ color: "#3dcd58" }}>EcoVeg Calculadora</SubTitle>
+            <img
+              src={
+                "https://media.istockphoto.com/id/1370669875/pt/vetorial/calculator-math-device-financial-analytics-bookkeeping-budget-debit-credit-calculations.jpg?s=612x612&w=0&k=20&c=dItxLAc2jiD6vBNbESmIRidLcXLupHedttNco80z3HA="
+              }
+              style={{ borderRadius: "10px", width: "100%", height: "85%" }}
+            />
           </Card>
         </ContainerRight>
         <Tour steps={tutorialSteps} />

@@ -24,7 +24,7 @@ const Profile = () => {
       <Header/>
       <Card>
         <Wallpaper/>
-        <ProfileImage src={profile.image} alt={profile.name} />
+        <ProfileImage src={"https://media.istockphoto.com/id/1367421610/pt/foto/view-of-young-man-using-a-smartphone-at-night-time-with-city-view-landscape-in-the-background.jpg?s=612x612&w=0&k=20&c=8LBMiPA1n2ycEUXUr_UVUSBPAppf5Y5UXJuybHb62DU="} alt={profile.name} />
         <Value style={{ fontSize:'24px'}}>{profile.name}</Value>
         <Value style={{fontWeight:400}}>São Paulo, São Paulo, Brasil</Value>
         <Data>

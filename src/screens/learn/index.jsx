@@ -13,12 +13,18 @@ import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
+import {
+  Articles,
+  sustainabilityTopics,
+  sustainabilityTopics2row,
+  sustainabilityTopics3row,
+  sustainabilityTopics4row,
+} from "./content";
 
 const Learn = () => {
-  const Card = ({ title, videoUrl, description }) => {
+  const CardVideo = ({ title, videoUrl, description }) => {
     return (
-      <CardContainer>
+      <CardContainer style={{ cursor: "pointer" }}>
         <Title>{title}</Title>
         <VideoWrapper>
           <Video src={videoUrl} frameborder="0" allowfullscreen />
@@ -28,83 +34,20 @@ const Learn = () => {
     );
   };
 
-  const sustainabilityTopics = [
-    {
-      title: "Oque é sustentabilidade",
-      videoUrl: "https://www.youtube.com/embed/vG4WThkdliI",
-      description: "Conversa com Especialista.",
-    },
-    {
-      title: "A sustentabilidade e a digitalização ",
-      videoUrl: "https://www.youtube.com/embed/ml6ADoI03js",
-      description: "Conversa com Especialista.",
-    },
-    {
-      title: "Serviços e projetos de sustentabilidade",
-      videoUrl: "https://www.youtube.com/embed/6YRGA-I6-Mk",
-      description: "Conversa com Especialista.",
-    },
-  ];
-  const sustainabilityTopics2row = [
-    {
-      title: "Norma ABNT NBR IEC 61439",
-      videoUrl: "https://www.youtube.com/embed/Jnh4T13wJxc",
-      description: "Normas relativas à Sustentabilidade",
-    },
-    {
-      title: "Norma IEC 62271-200 ",
-      videoUrl: "https://www.youtube.com/embed/rRylTkwaL3Q",
-      description: "Normas relativas à Sustentabilidade",
-    },
-    {
-      title: "Norma ABNT NBR 14039 ",
-      videoUrl: "https://www.youtube.com/embed/r3qeaw4VqJY",
-      description: "Normas relativas à Sustentabilidade",
-    },
-    // Add more topics as desired
-  ];
-  const sustainabilityTopics3row = [
-    {
-      title: "Dicas de Sustentabilidade e Economia",
-      videoUrl: "https://www.youtube.com/embed/snGqMnvZ5KM",
-      description:
-        "Dicas de como você pode trazer economia e sustentabilidade para sua rotina.",
-    },
-    {
-      title: "10 hábitos sustentáveis que mudaram a minha vida",
-      videoUrl: "https://www.youtube.com/embed/EVb8xKCYgpo",
-      description:
-        "10 dicas para tornar sua vida mais prazerosa e mais sustentável.",
-    },
-    {
-      title: "Redução do Desperdício de Alimentos",
-      videoUrl: "https://www.youtube.com/embed/RPPF3LxzgYA",
-      description:
-        "Aprenda sobre como desperdiçar menos os alimentos da sua casa.",
-    },
-    // Add more topics as desired
-  ];
+  const CardArticle = ({ title, imageUrl, description }) => {
+    return (
+      <CardContainer style={{ cursor: "pointer", marginLeft:'5px', marginRight:'5px'}}>
+        <Title>{title}</Title>
+        <VideoWrapper>
+          <img src={imageUrl} frameborder="0" allowfullscreen />
+        </VideoWrapper>
+        <Description>{description}</Description>
+        <strong>Ver Mais</strong>
+      </CardContainer>
+    );
+  };
 
-  const sustainabilityTopics4row = [
-    {
-      title: "Sustainability in everyday life",
-      videoUrl: "https://www.youtube.com/embed/kZIrIQDf1nQ",
-      description:
-        "In our day to day life we face small actions that can make a big difference for the environment and for our pockets. ",
-    },
-    {
-      title: "50 dicas de sustentabilidade",
-      videoUrl: "https://www.youtube.com/embed/Uq-oQl5uJKI",
-      description: "For teens & people living with parents/roommates",
-    },
-    {
-      title: "Sustainable Life Hacks",
-      videoUrl: "https://www.youtube.com/embed/RyvBhC7MT84",
-      description: "Life hacks for an sustainable everyday life",
-    },
-    // Add more topics as desired
-  ];
-  const [value, setValue] = React.useState("one");
+  const [value, setValue] = React.useState("articles");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -118,99 +61,125 @@ const Learn = () => {
 
       <br />
       <br />
-      <Box sx={{ width: "100%" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="wrapped label tabs example"
-        >
-          <Tab value="articles" label="Artigos" defaultValue={true}/>
-          <Tab value="videos" label="Videos" children={"aa"}/>
-        </Tabs>
-      </Box>
-      <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            minWidth: "80vw",
-          }}
-        >
-          {sustainabilityTopics.map((topic, index) => (
-            <Card
-              key={index}
-              title={topic.title}
-              videoUrl={topic.videoUrl}
-              description={topic.description}
-            />
-          ))}
-        </div>
-        <br />
-        <br />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            minWidth: "80vw",
-          }}
-        >
-          {sustainabilityTopics2row.map((topic, index) => (
-            <Card
-              key={index}
-              title={topic.title}
-              videoUrl={topic.videoUrl}
-              description={topic.description}
-            />
-          ))}
-        </div>
-        <br />
-        <h2>Conteúdo Sugerido</h2>
-        <br />
-        <br />
-        <Carousel>
-          <Carousel.Item>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around",
-                minWidth: "80vw",
-              }}
-            >
-              {sustainabilityTopics3row.map((topic, index) => (
-                <Card
-                  key={index}
-                  title={topic.title}
-                  videoUrl={topic.videoUrl}
-                  description={topic.description}
-                />
-              ))}
-            </div>
-          </Carousel.Item>
 
-          <Carousel.Item>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-around",
-                minWidth: "80vw",
-              }}
-            >
-              {sustainabilityTopics4row.map((topic, index) => (
-                <Card
-                  key={index}
-                  title={topic.title}
-                  videoUrl={topic.videoUrl}
-                  description={topic.description}
-                />
-              ))}
-            </div>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="wrapped label tabs example"
+        defaultValue={"articles"}
+        style={{ marginBottom: "20px" }}
+      >
+        <Tab value="articles" label="Artigos" style={{ fontSize: "1.4vw" }} />
+        <Tab value="videos" label="Videos" style={{ fontSize: "1.4vw" }} />
+      </Tabs>
+
+      {value === "articles" ? (
+        <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              maxWidth: "80vw",
+              flexWrap:'wrap'
+            }}
+          >
+            {Articles.map((topic, index) => (
+              <CardArticle
+                title={topic.title}
+                description={topic.description}
+                imageUrl={topic.imageUrl}
+                key={index}
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              minWidth: "80vw",
+            }}
+          >
+            {sustainabilityTopics.map((topic, index) => (
+              <CardVideo
+                key={index}
+                title={topic.title}
+                videoUrl={topic.videoUrl}
+                description={topic.description}
+              />
+            ))}
+          </div>
+          <br />
+          <br />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              minWidth: "80vw",
+            }}
+          >
+            {sustainabilityTopics2row.map((topic, index) => (
+              <CardVideo
+                key={index}
+                title={topic.title}
+                videoUrl={topic.videoUrl}
+                description={topic.description}
+              />
+            ))}
+          </div>
+          <br />
+          <h2>Conteúdo Sugerido</h2>
+          <br />
+          <br />
+          <Carousel>
+            <Carousel.Item>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                  minWidth: "80vw",
+                }}
+              >
+                {sustainabilityTopics3row.map((topic, index) => (
+                  <CardVideo
+                    key={index}
+                    title={topic.title}
+                    videoUrl={topic.videoUrl}
+                    description={topic.description}
+                  />
+                ))}
+              </div>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                  minWidth: "80vw",
+                }}
+              >
+                {sustainabilityTopics4row.map((topic, index) => (
+                  <CardVideo
+                    key={index}
+                    title={topic.title}
+                    videoUrl={topic.videoUrl}
+                    description={topic.description}
+                  />
+                ))}
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      )}
+
       <br />
       <br />
     </Container>

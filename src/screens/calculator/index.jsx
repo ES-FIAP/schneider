@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
+import { Favorite, WaterDrop, Forest, Spa, Cloud } from "@mui/icons-material";
+import {
+  ResultCard,
+  Input,
+  ContainerInput,
+  Select,
+  Option,
+  Title,
+  ContainerInputs,
+  ContainerPage,
+  Card,
+  TextInput,
+  TitleResult,
+  ContainerColums,
+} from "./styles";
 
 const Calculator = () => {
   const [selectedType, setSelectedType] = useState("Vegano");
@@ -38,103 +53,113 @@ const Calculator = () => {
   }, [selectedType, dias, meses, anos]);
 
   return (
-    <div>
+    <ContainerPage>
       <Header />
-      <div className="container">
-        <h1
-          style={{
-            color: "rgb(1, 34, 136)",
-            fontWeight: 700,
-            fontSize: "25px",
-          }}
-        >
+      <Card>
+        <Title>
           Calcule sua economia em um estilo de vida vegetariano ou vegano
-        </h1>
+        </Title>
         <div className="result"></div>
 
-        <label
-          htmlFor="type"
-          style={{ fontSize: "17px", fontWeight: 600, color: "rgb(15, 0, 65)" }}
-        >
-          Selecione seu estilo de vida:
-        </label>
-        <select
-          className="type"
-          id="type"
-          onChange={(e) => setSelectedType(e.target.value)}
-          value={selectedType}
-        >
-          <option value="Vegano">Vegano</option>
-          <option value="Vegetariano">Vegetariano</option>
-        </select>
-        <div style={{ display: "flex", width: "100%" }}>
-          <div>
-            <h3>Dias</h3>
-            <input
-              placeholder="0"
-              type="number"
-              id="dias"
-              value={dias}
-              onChange={(e) => setDias(parseInt(e.target.value) || 0)}
-            />
-          </div>
-          <div>
-            <h3>Meses</h3>
-            <input
-              placeholder="0"
-              type="number"
-              id="meses"
-              value={meses}
-              onChange={(e) => setMeses(parseInt(e.target.value) || 0)}
-            />
-          </div>
-          <div>
-            <h3>Anos</h3>
-            <input
-              placeholder="0"
-              type="number"
-              id="anos"
-              value={anos}
-              onChange={(e) => setAnos(parseInt(e.target.value) || 0)}
-            />
-          </div>
-        </div>
+        <ContainerColums>
+          <ContainerInputs>
+            <h2
+              htmlFor="type"
+              style={{
+                fontSize: "26px",
+                fontWeight: 600,
+                color: "rgb(15, 0, 65)",
+                textAlign:'center'
+              }}
+            >
+              Selecione seu estilo de vida:
+            </h2>
+            <Select
+              className="type"
+              id="type"
+              onChange={(e) => setSelectedType(e.target.value)}
+              value={selectedType}
+            >
+              <Option value="Vegano">Vegano</Option>
+              <Option value="Vegetariano">Vegetariano</Option>
+            </Select>
+            <ContainerInput>
+              <Input
+                placeholder="0"
+                type="number"
+                id="dias"
+                value={dias}
+                onChange={(e) => setDias(parseInt(e.target.value) || 0)}
+              />
+              <TextInput style={{}}>Dias</TextInput>
+            </ContainerInput>
+            <ContainerInput>
+              <Input
+                placeholder="0"
+                type="number"
+                id="meses"
+                value={meses}
+                onChange={(e) => setMeses(parseInt(e.target.value) || 0)}
+              />
+              <TextInput>Meses</TextInput>
+            </ContainerInput>
+            <ContainerInput>
+              <Input
+                placeholder="0"
+                type="number"
+                id="anos"
+                value={anos}
+                onChange={(e) => setAnos(parseInt(e.target.value) || 0)}
+              />
+              <TextInput>Anos</TextInput>
+            </ContainerInput>
+          </ContainerInputs>
 
-        <h2>Até agora você salvou:</h2>
-        <div
-          style={{ backgroundColor: "rgb(255, 0, 60)" }}
-          className="resultado"
-        >
-          <h3 id="vidasSalvas">{vidasSalvas}</h3>
-          Vida Animal
-        </div>
-        <div
-          style={{ backgroundColor: "rgb(0, 78, 203)" }}
-          className="resultado"
-        >
-          <h3 id="LitrosDeAgua">{litrosDeAgua}</h3>
-          Litros de Água
-        </div>
-        <div
-          style={{ backgroundColor: "rgb(255, 153, 0)" }}
-          className="resultado"
-        >
-          <h3 id="Graos">{grao}</h3>
-          kg de grão
-        </div>
-        <div
-          style={{ backgroundColor: "rgb(0, 129, 0)" }}
-          className="resultado"
-        >
-          <h3 id="Floresta">{floresta}</h3>
-          m² de terreno florestado
-        </div>
-        <div style={{ backgroundColor: "purple" }} className="resultado">
-          <h3 id="gasCarbonico">{gasCarbonico}</h3>
-          kg CO2
-        </div>
-      </div>
-    </div>
+          <div>
+            <h2 style={{ textAlign:'center'}}>Até agora você salvou:</h2>
+            <ResultCard
+              style={{ backgroundColor: "rgb(255, 0, 60)" }}
+              className="resultado"
+            >
+              <Favorite />
+              <TitleResult id="vidasSalvas">{vidasSalvas}</TitleResult>
+              Vida Animal
+            </ResultCard>
+            <ResultCard
+              style={{ backgroundColor: "rgb(0, 78, 203)" }}
+              className="resultado"
+            >
+              <WaterDrop />
+              <TitleResult id="LitrosDeAgua">{litrosDeAgua}</TitleResult>
+              Litros de Água
+            </ResultCard>
+            <ResultCard
+              style={{ backgroundColor: "rgb(255, 153, 0)" }}
+              className="resultado"
+            >
+              <Spa />
+              <TitleResult id="Graos">{grao}</TitleResult>
+              kg de grão
+            </ResultCard>
+            <ResultCard
+              style={{ backgroundColor: "rgb(0, 129, 0)" }}
+              className="resultado"
+            >
+              <Forest color="#f1f1f1" />
+              <TitleResult id="Floresta">{floresta}</TitleResult> m² de floresta
+            </ResultCard>
+            <ResultCard
+              style={{ backgroundColor: "purple" }}
+              className="resultado"
+            >
+              <Cloud />
+              <TitleResult id="gasCarbonico">{gasCarbonico}</TitleResult>
+              kg de CO2
+            </ResultCard>
+          </div>
+        </ContainerColums>
+      </Card>
+    </ContainerPage>
   );
 };
 export default Calculator;

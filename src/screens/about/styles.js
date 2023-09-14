@@ -115,12 +115,31 @@ export const CardContainer = styled.div`
     transform: translateY(-5px);
   }
 `;
-export const GifImage = styled.img`
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+export const Info = styled.div`
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+`;
+
+export const Video = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const BoxPerfil = styled.div`
+  height: 300px;
+  width: 25%;
+  background-color: #fff;
+  margin: 10px 10px 10px 10px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px;
+`;
+
+export const Fundo = styled.div`
+  width: 100%;
+  height: 150px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  object-fit: cover;
 `;

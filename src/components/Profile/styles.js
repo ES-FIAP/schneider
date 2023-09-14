@@ -3,7 +3,7 @@ import StarImg from "../../images/starBlue.svg";
 import AvatarImg from "../../images/homem2.jpg";
 export const Container = styled.div`
   width: 16vw;
-  height: 37.5vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -54,12 +54,13 @@ export const DescriptionContainer = styled.div`
   padding-top: 5px;
 `;
 export const ImgContainer = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  background-image: url(${AvatarImg});
+  width: 130px;
+  height: 130px;
+  border-radius: 70px;
+  background-image: url("https://media.istockphoto.com/id/1367421610/pt/foto/view-of-young-man-using-a-smartphone-at-night-time-with-city-view-landscape-in-the-background.jpg?s=612x612&w=0&k=20&c=8LBMiPA1n2ycEUXUr_UVUSBPAppf5Y5UXJuybHb62DU=");
   background-size: cover;
   background-position: center;
+  margin-top: 15px;
 `;
 
 export const Line = styled.div`

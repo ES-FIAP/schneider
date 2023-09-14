@@ -10,7 +10,7 @@ export const PostCreation = styled.div`
   background-color: #fefefe;
   box-shadow: 0 8px 15px -8px rgba(51, 51, 51, 0.36);
   justify-content: space-between;
-  height: 20vh;
+  height: 18vh;
   padding-left: 10px;
   padding-right: 10px;
   width: 550px;
@@ -36,9 +36,9 @@ export const ContainerTextArea = styled.div`
   align-items: left;
   margin: 20px;
   background-color: #fefefe;
-  border: 1px solid #d3d3d3;
-  border-radius: 10px;
-  padding: 20px;
+  border: 2px solid #d3d3d3;
+  border-radius: 30px;
+  padding: 15px;
   width: 95%;
   text-align: left;
   cursor: pointer;
@@ -59,20 +59,19 @@ export const PostOptionButton = styled.button`
   font-weight: 600;
   border: none;
   border-radius: 5px;
-  background-color: #f1f5f9;
   cursor: pointer;
   justify-content: space-around;
   display: flex;
   align-items: center;
-  color: #04b600;
-  box-shadow: 0 5px 5px -5px rgba(51, 51, 51, 0.36);
+  color: #00b8ff;
+  background-color: transparent;
 `;
 
 export const ImgContainer = styled.div`
   width: 70px;
   height: 60px;
   border-radius: 50px;
-  background-image: url(${AvatarImg});
+  background-image: url("https://media.istockphoto.com/id/1367421610/pt/foto/view-of-young-man-using-a-smartphone-at-night-time-with-city-view-landscape-in-the-background.jpg?s=612x612&w=0&k=20&c=8LBMiPA1n2ycEUXUr_UVUSBPAppf5Y5UXJuybHb62DU=");
   background-size: cover;
   background-position: center;
 `;

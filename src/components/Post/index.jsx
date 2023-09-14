@@ -12,18 +12,19 @@ import { Button } from "react-bootstrap";
 
 const Post = ({ perfilImage, ImagePost, Text, Name }) => {
   const PerfilImage = styled.div`
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
+    width: 65px;
+    height: 65px;
+    border-radius: 80px;
     background-image: url(${perfilImage});
     background-size: cover;
     background-position: center;
+    margin-right: 10px;
   `;
   const ContainerImage = styled.div`
-    width: 350px;
-    height: 250px;
-    margin-left: 10%;
-    border-radius: 20px;
+    width: 450px;
+    height: 300px;
+    margin-left: 5%;
+    border-radius: 4px;
     background-image: url(${ImagePost});
     background-size: cover;
     background-position: center;

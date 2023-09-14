@@ -19,7 +19,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 250px;
+  width: 350px;
   position: relative;
   padding: 20px;
   justify-content: space-around;
@@ -41,7 +41,7 @@ export const Footer = styled.div`
 
 export const ContainerText = styled.div`
   width: 90%;
-  height: 20%;
+  height: 15%;
   padding-left: 25px;
 `;
 
