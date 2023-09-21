@@ -50,7 +50,7 @@ const App = () => (
             }
             `}
           </style>
-          <Title>Schneider Social</Title>
+          <Title>GreenHub</Title>
           <i
             class="bi bi-arrow-clockwise"
             style={{

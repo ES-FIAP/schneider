@@ -28,8 +28,8 @@ const Home = () => {
       <h2>Sobre</h2>
       <br />
       <p>
-        Bem vindo à Schneider Social! Estamos contentes com sua visita e
-        esperamos que seja uma plataforma muito proveitosa para seu cotidiano.{" "}
+        Bem vindo à GreenHub! Estamos contentes com sua visita e esperamos que
+        seja uma plataforma muito proveitosa para seu cotidiano.{" "}
       </p>
     </div>,
     <div>
@@ -63,9 +63,21 @@ const Home = () => {
         <ContainerRight>
           <Profile></Profile>
           <Card style={{ height: "600px" }}>
-            <SubTitle>Eventos</SubTitle>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                cursor: "pointer",
+              }}
+              onClick={() => Navigate("/calendar")}
+            >
+              <SubTitle>Eventos</SubTitle>{" "}
+              <p style={{ color: "#007bff" }}>Ver mais</p>
+            </div>
+
             <p>
-              <strong>Innovation Summit South America 2021</strong> - 30/10/2023
+              <strong>Innovation Summit South America</strong> - 30/10/2023
             </p>
             <img
               style={{ borderRadius: "4px", width: "100%", height: "30%" }}

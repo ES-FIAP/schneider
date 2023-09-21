@@ -18,6 +18,7 @@
     "bootstrap-icons": "^1.10.5",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
+    "react-calendar": "^4.6.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.1",
     "react-native-safe-area-context": "^4.5.3",
