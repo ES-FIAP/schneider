@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <Container>
       <ContainerLogo />
-       <MenuOption onClick={() => Navigate("/home")}>
-        <i class="bi bi-house" style={{ fontSize:"25px"}} /> Home
+       <MenuOption onClick={() => Navigate("/feed")}>
+        <i class="bi bi-house" style={{ fontSize:"25px"}} /> Feed
       </MenuOption>
       <MenuOption onClick={() => Navigate("/game")}>
         <i class="bi bi-controller" style={{ fontSize:"25px"}} /> Game
@@ -25,7 +25,7 @@ const Header = () => {
       <MenuOption onClick={() => Navigate("/about")}>
         <i class="bi bi-card-text" style={{ fontSize:"25px"}} /> Sobre o projeto
       </MenuOption>
-      <a href="https://youtu.be/F1Nv6QSONIE" target="_blank">   <MenuOption  >
+      <a href="https://www.youtube.com/watch?v=YvhKTAwE2-w" target="_blank">   <MenuOption  >
         <i class="bi bi-play-fill" style={{ fontSize:"25px"}} /> Video Pitch
       </MenuOption></a>
 

@@ -13,6 +13,7 @@ import {
 import Button from "../../components/button";
 import Input from "../../components/Input";
 import { Link, redirect, useNavigate } from "react-router-dom";
+import Logo from "../../images/logo-tranparente.png";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const LoginPage = () => {
   };
 
   if (loggedIn) {
-    return navigate("/home");
+    return navigate("/feed");
   }
 
   return (

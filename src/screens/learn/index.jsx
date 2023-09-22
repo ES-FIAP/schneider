@@ -57,7 +57,7 @@ const Learn = () => {
       <Header />
       <br />
 
-      <Title style={{ fontSize: "2.5vw" }}>Aprendendo com a schneider</Title>
+      <Title style={{ fontSize: "2.5vw" }}>Aprendendo com a Schneider</Title>
 
       <br />
       <br />

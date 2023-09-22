@@ -21,7 +21,7 @@ import gameIMG from "../../images/backgroundGamer.jpg";
 import AprendaImg from "../../images/aprenda.png";
 import gameFail from "../../images/gamefail.png";
 
-const Home = () => {
+const Feed = () => {
   const Navigate = useNavigate();
   const tutorialSteps = [
     <div>
@@ -170,4 +170,4 @@ const Home = () => {
     </ContainerPage>
   );
 };
-export default Home;
+export default Feed;

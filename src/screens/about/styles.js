@@ -128,8 +128,8 @@ export const Video = styled.div`
 `;
 
 export const BoxPerfil = styled.div`
-  height: 300px;
-  width: 25%;
+  height: 350px;
+  width: 330px;
   background-color: #fff;
   margin: 10px 10px 10px 10px;
   border-radius: 25px;
@@ -142,4 +142,14 @@ export const Fundo = styled.div`
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   object-fit: cover;
+`;
+
+export const Perfil = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin-top: -70px;
+  margin-left: auto;
+  margin-right: auto;
 `;

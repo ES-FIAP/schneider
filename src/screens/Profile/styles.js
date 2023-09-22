@@ -50,14 +50,15 @@ export const Card = styled.div`
   box-shadow: 4px 5px 15px 0px #606090;
 `;
 export const Data = styled.div`
-  width: 90%;
+  width: 70%;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
   max-height: 30%;
 `;
 export const SubTitle = styled.p`
