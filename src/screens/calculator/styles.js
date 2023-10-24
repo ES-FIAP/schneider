@@ -12,11 +12,13 @@ export const ContainerColums = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
 `;
 
 export const Card = styled.div`
   width: 80vw;
-  height: 80vh;
+  min-height: 80vh;
   background-color: #ffffff;
   left: 10%;
   border-radius: 20px;
@@ -31,10 +33,11 @@ export const Card = styled.div`
 `;
 
 export const Title = styled.p`
-  color: #515151;
-  font-weight: 700;
-  font-size: 1.5vw;
-  margin-bottom: 80px;
+  color: #42b4e8;
+  font-weight: 500;
+  font-size: 1.8vw;
+  margin-bottom: 60px;
+  margin-top: 25px;
 `;
 
 export const TitleResult = styled.text`
@@ -64,7 +67,7 @@ export const ResultCard = styled.div`
 export const ContainerInputs = styled.div`
   display: flex;
   flex-direction: column;
-  width: 23%;
+  width: 30%;
 `;
 
 export const ContainerInput = styled.div`
@@ -109,7 +112,7 @@ export const Select = styled.select`
   -webkit-font-smoothing: antialiased;
   color: #100d1c;
   display: flex;
-  font-size: 28px;
+  font-size: 25px;
   width: 100%;
   height: 56px;
   align-items: center;

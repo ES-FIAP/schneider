@@ -21,41 +21,57 @@ const LoginPage = () => {
   const schema = yup.object().shape({
     email: yup.string().email("Email inválido").required("Campo obrigatório"),
     password: yup.string().required("Campo obrigatório"),
+    cellphone: yup.number().positive().integer().min(8),
   });
   const [loggedIn, setLoggedIn] = useState(false);
-  const { handleSubmit } = useForm({
+  const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = () => {
-    console.log("0oi");
+  const onSubmit = (data) => {
+    // Aqui você pode processar os dados do formulário, se necessário
+    console.log(data);
+
+    // Marque o usuário como logado
     setLoggedIn(true);
+
+    // Redirecione para a página de feed após o login bem-sucedido
+    navigate("/feed");
   };
 
   if (loggedIn) {
     return navigate("/feed");
   }
-
   return (
     <Container>
-      <img src={Logo} width={300} height={80} style={{ marginLeft: "10vw" }} />
+      <img src={Logo} width={300} height={80} />
       <LoginWrapper>
-        <Form>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <LoginTitle>Seja bem-vindo(a)</LoginTitle>
-          <Input placeholder="E-mail" id="email" name="email" />
-
-          <Input placeholder="Senha" id="password" name="password" />
-
-          <Button
-            type="submit"
-            text={"Acessar"}
-            click={() => setLoggedIn(true)}
+          <Input
+            placeholder="Nome Completo"
+            id="nome"
+            name="nome"
+            ref={register}
           />
+          <Input
+            placeholder="Celular"
+            id="cellphone"
+            name="cellphone"
+            ref={register}
+          />
+          <Input placeholder="E-mail" id="email" name="email" ref={register} />
+          <Input
+            placeholder="Senha"
+            id="password"
+            name="password"
+            ref={register}
+          />
+
           <Button
             type="submit"
-            text={"Primeiro Acesso"}
-            style={{ width: "300px" }}
-            click={() => navigate("/register")}
+            text={"Criar Conta"}
+            click={() => setLoggedIn(true)}
           />
         </Form>
       </LoginWrapper>

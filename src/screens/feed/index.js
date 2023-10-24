@@ -13,19 +13,16 @@ import {
 import Post from "../../components/Post";
 import Homem from "../../images/homem1.jpg";
 import mulher1 from "../../images/mulher1.jpg";
-import senhora from "../../images/senhora.jpg";
 import videoImg from "../../images/videoOque.png";
 import Post1 from "../../images/custa1kgcarne.jpg";
 import { useNavigate } from "react-router-dom";
 import gameIMG from "../../images/backgroundGamer.jpg";
 import AprendaImg from "../../images/aprenda.png";
-import gameFail from "../../images/gamefail.png";
 
 const Feed = () => {
   const Navigate = useNavigate();
   const tutorialSteps = [
     <div>
-      <h2>Sobre</h2>
       <br />
       <p>
         Bem vindo à GreenHub! Estamos contentes com sua visita e esperamos que
@@ -33,11 +30,11 @@ const Feed = () => {
       </p>
     </div>,
     <div>
-      <h2>Game</h2>
+      <h2>Jogos</h2>
       <br />
       <p>
-        Aqui temos um jogo educativo para informar sobre qual tipo de lixo
-        utilizar.
+        Aqui você encontra um jogo educativo para informar sobre a Seleção de
+        lixo.
       </p>
       <img
         src={gameIMG}
@@ -48,7 +45,7 @@ const Feed = () => {
       <h2>Aprenda com a Schneider</h2>
       <br />
       <p>
-        Também temos uma seleção de conteúdos sobre sustentabilidade! Checa aí!
+        Também temos uma seleção de conteúdos sobre diversos assuntos! Checa aí!
       </p>
       <img
         src={AprendaImg}

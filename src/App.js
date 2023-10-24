@@ -16,6 +16,7 @@ const Learn = lazy(() => import("./screens/learn"));
 const Profile = lazy(() => import("./screens/Profile"));
 const Calculator = lazy(() => import("./screens/calculator"));
 const Calendar = lazy(() => import("./screens/calendar"));
+const Register = lazy(() => import("./screens/register"));
 
 const Title = styled.div`
   font-size: 4vw;
@@ -71,6 +72,7 @@ const App = () => (
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Calculator" element={<Calculator />} />
         <Route path="/Calendar" element={<Calendar />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Suspense>
   </Router>

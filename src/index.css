@@ -1,3 +1,4 @@
+@import "rsuite/dist/rsuite.css";
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,6 +10,9 @@ body {
   overflow-x: hidden;
 }
 
+#root {
+  padding: 10px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -252,4 +256,23 @@ strong {
 .block {
   width: 100%;
   height: 200px;
+}
+
+.calendar-todo-list {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar-todo-list li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.calendar-todo-item-badge {
+  vertical-align: top;
+  margin-top: 8px;
+  width: 6px;
+  height: 6px;
 }

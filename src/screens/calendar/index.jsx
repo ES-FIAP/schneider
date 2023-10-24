@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import ReactCalendar from "react-calendar";
+//import ReactCalendar from "react-calendar";
+import { Whisper, Popover, Badge } from "rsuite";
+import CalendarR from "rsuite/Calendar";
 import "react-calendar/dist/Calendar.css";
 import Header from "../../components/Header";
 import {
@@ -13,43 +15,67 @@ import {
   Title,
 } from "./styles";
 
+function getTodoList(date) {
+  const day = date.getDate();
+
+  switch (day) {
+    case 28:
+      return [
+        { time: "14:00 pm", title: "NEXT - FIAP" },
+      ];
+    case 15:
+      return [
+        { time: "09:30 pm", title: "Products Introduction Meeting" },
+        { time: "12:30 pm", title: "Client entertaining" },
+        { time: "02:00 pm", title: "Product design discussion" },
+        { time: "05:00 pm", title: "Product test and acceptance" },
+        { time: "06:30 pm", title: "Reporting" },
+        { time: "10:00 pm", title: "Going home to walk the dog" },
+      ];
+    default:
+      return [];
+  }
+}
+
 const Calendar = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
-  const initialEvents = [
-    { date: 10, description: "Innovation" },
-    { date: 28, description: "Digital Talk" },
-    { date: 20, description: "Live" },
-  ];
-  const [events, setEvents] = useState(initialEvents);
+  function renderCell(date) {
+    const list = getTodoList(date);
+    const displayList = list.filter((item, index) => index < 2);
 
-  const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+    if (list.length) {
+      const moreCount = list.length - displayList.length;
+      const moreItem = (
+        <li>
+          <Whisper
+            placement="top"
+            trigger="click"
+            speaker={
+              <Popover>
+                {list.map((item, index) => (
+                  <p key={index}>
+                    <b>{item.time}</b> - {item.title}
+                  </p>
+                ))}
+              </Popover>
+            }
+          >
+            <a>{moreCount} more</a>
+          </Whisper>
+        </li>
+      );
 
-  const calendarCells = [];
-  const handleDateClick = (date) => {
-    const eventDescription = window.prompt(
-      "Adicione um evento para esta data:"
-    );
-    if (eventDescription) {
-      const newEvent = { date, description: eventDescription };
-      setEvents([...events, newEvent]);
+      return (
+        <ul className="calendar-todo-list">
+          {displayList.map((item, index) => (
+            <li key={index}>
+              <Badge color="green" /> <b>{item.time}</b> - {item.title}
+            </li>
+          ))}
+          {moreCount ? moreItem : null}
+        </ul>
+      );
     }
-  };
-  for (let i = 1; i <= 31; i++) {
-    const eventForDate = events.find((event) => event.date === i);
-
-    calendarCells.push(
-      <DayCell
-        key={i}
-        onClick={() => handleDateClick(i)}
-        style={{
-          backgroundColor: selectedDate === i ? "#007bff" : "transparent",
-          color: selectedDate === i ? "white" : "inherit",
-        }}
-      >
-        {i}
-        {eventForDate && <EventMarker>{eventForDate.description}</EventMarker>}
-      </DayCell>
-    );
+    return null;
   }
 
   return (
@@ -57,15 +83,19 @@ const Calendar = () => {
       <Header />
       <Card>
         <Title>Calendário de Eventos</Title>
-        <CalendarContainer>
-          <CalendarHeader>Setembro 2023</CalendarHeader>
-          <CalendarBody>
-            {weekdays.map((day) => (
-              <DayCell key={day}>{day}</DayCell>
-            ))}
-            {calendarCells}
-          </CalendarBody>
-        </CalendarContainer>
+        <CalendarR
+          
+          renderCell={renderCell}
+          locale={{
+            sunday: "Domingo",
+            monday: "Segunda",
+            tuesday: "Terça",
+            wednesday: "Quarta",
+            thursday: "Quinta",
+            friday: "Sexta",   
+          saturday:"Sábado"
+          }}
+        />
       </Card>
     </ContainerPage>
   );

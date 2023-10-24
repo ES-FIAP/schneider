@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import { Favorite, WaterDrop, Forest, Spa, Cloud } from "@mui/icons-material";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import {
   ResultCard,
   Input,
@@ -15,6 +17,7 @@ import {
   TitleResult,
   ContainerColums,
 } from "./styles";
+import { left } from "@popperjs/core";
 
 const Calculator = () => {
   const [selectedType, setSelectedType] = useState("Vegano");
@@ -66,10 +69,11 @@ const Calculator = () => {
             <h2
               htmlFor="type"
               style={{
-                fontSize: "26px",
+                fontSize: "27px",
                 fontWeight: 600,
                 color: "rgb(15, 0, 65)",
-                textAlign:'center'
+                textAlign: "center",
+                marginBottom:'18px'
               }}
             >
               Selecione seu estilo de vida:
@@ -116,7 +120,7 @@ const Calculator = () => {
           </ContainerInputs>
 
           <div>
-            <h2 style={{ textAlign:'center'}}>Até agora você salvou:</h2>
+            <h2 style={{ textAlign: "center", fontSize:'27px' }}>Até agora você salvou:</h2>
             <ResultCard
               style={{ backgroundColor: "rgb(255, 0, 60)" }}
               className="resultado"
@@ -158,6 +162,44 @@ const Calculator = () => {
             </ResultCard>
           </div>
         </ContainerColums>
+        <div style={{width:'70%', marginTop:'5%'}}>
+        <h2 style={{ fontFamily: "monospace", marginLeft:'5%' }}>Recomendações</h2>
+          <ul>
+            <li style={{ listStyle:'none'}}>
+              <a
+                href="https://gq.globo.com/Prazeres/noticia/2019/03/impacto-ambiental-carnivoros-e-vegetarianos-precisam-se-tornar-veganos.html"
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <Chip label="Globo: Impacto Ambiental" variant="outlined" />
+              </a>
+            </li>
+            <li style={{ listStyle:'none'}}>
+              <a
+                href="https://ciclovivo.com.br/vida-sustentavel/alimentacao/dieta-vegana-reduz-impactos-ambientais-em-ate-75/"
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
+                <Chip
+                  label="Ciclo Vivo: Importância da dieta vegana"
+                  variant="outlined"
+                />
+              </a>
+              <li style={{ listStyle:'none'}}>
+                <a
+                  href="https://www.waterfootprint.org/resources/interactive-tools/product-gallery/"
+                  rel="nofollow noreferrer"
+                  target="_blank"
+                >
+                  <Chip
+                    label="WaterFootPrint: Pegada Hídrica"
+                    variant="outlined"
+                  />
+                </a>
+              </li>
+            </li>
+          </ul>
+        </div>
       </Card>
     </ContainerPage>
   );
