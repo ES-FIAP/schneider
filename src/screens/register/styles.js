@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import grad from "../../images/gradient.jpg";
-import image from "../../images/imageLogin.png";
+import image from "../../images/walpapermaos.png";
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
@@ -9,18 +9,19 @@ export const Container = styled.div`
   left: 0;
   z-index: -1;
   display: flex;
-
+  justify-content: center;
   overflow: hidden !important;
 `;
 
 export const ContainerImage = styled.div`
-  height: 100vh;
-  width: 60vw;
+  height: 40vh;
+  width: 100vw;
   background-image: url(${image});
   background-size: cover;
   background-position: center;
-  position: relative;
-  opacity: 0.5;
+  position: absolute;
+  z-index: 0;
+  top: 12vh;
 `;
 
 export const Backdrop = styled.div`
@@ -41,11 +42,12 @@ export const LoginWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 30vw;
+  margin-left: 5vw;
+  margin-top: 5vh;
+  width: 100%;
   overflow: hidden !important;
-  background-color: #fefefe;
   position: relative;
+  text-align: center;
   align-items: flex-start;
 `;
 
@@ -53,25 +55,29 @@ export const LoginTitle = styled.h1`
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
-  font-size: 23px;
+  font-size: 1.8vw;
   letter-spacing: 0.5px;
   line-height: 27px;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-
-  color: #00b332;
+  text-align: center;
+  color: #ffff;
+  text-shadow: black 0.1em 0.1em 0.2em}
 `;
 
 export const Form = styled.form`
-  align-items: start;
+  align-items: center;
   justify-content: center;
   padding: 5vw;
-  width: 100%;
-  height: 100%;
+  background-color: aliceblue;
+  height: 55%;
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid #dddd;
+  border-radius: 20px;
+  text-align: center;
 `;
 
 export const Label = styled.label`
@@ -99,7 +105,7 @@ export const SubmitButton = styled.button`
   padding: 8px 16px;
   background-color: #3dcd58;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;

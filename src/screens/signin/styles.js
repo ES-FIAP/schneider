@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import grad from "../../images/gradient.jpg";
-import image from "../../images/imageLogin.png";
+import image from "../../images/fotomenina.png";
 export const Container = styled.div`
   height: 100vh;
   width: 100vw;
@@ -14,13 +14,16 @@ export const Container = styled.div`
 `;
 
 export const ContainerImage = styled.div`
-  height: 100vh;
-  width: 60vw;
+  height: 70vh;
+  width: 30vw;
   background-image: url(${image});
   background-size: cover;
   background-position: center;
-  position: relative;
-  opacity: 0.5;
+  position: absolute;
+  margin-top: 10%;
+  opacity: 0.95;
+
+  left: 190px;
 `;
 
 export const Backdrop = styled.div`
@@ -47,24 +50,26 @@ export const LoginWrapper = styled.div`
   background-color: #fefefe;
   position: relative;
   align-items: flex-start;
+  margin-left: 30vw;
+  text-align: center;
 `;
 
 export const LoginTitle = styled.h1`
   font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
-  font-size: 23px;
+  font-size: 30px;
   letter-spacing: 0.5px;
-  line-height: 27px;
-  margin-bottom: 30px;
+  line-height: 30px;
+  margin-bottom: 60px;
   display: flex;
   align-items: center;
-
+  text-align: center;
   color: #00b332;
 `;
 
 export const Form = styled.form`
-  align-items: start;
+  align-items: center;
   justify-content: center;
   padding: 5vw;
   width: 100%;
@@ -72,6 +77,7 @@ export const Form = styled.form`
   position: relative;
   display: flex;
   flex-direction: column;
+  text-align: center;
 `;
 
 export const Label = styled.label`

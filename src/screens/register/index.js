@@ -29,13 +29,8 @@ const LoginPage = () => {
   });
 
   const onSubmit = (data) => {
-    // Aqui você pode processar os dados do formulário, se necessário
     console.log(data);
-
-    // Marque o usuário como logado
     setLoggedIn(true);
-
-    // Redirecione para a página de feed após o login bem-sucedido
     navigate("/feed");
   };
 
@@ -44,10 +39,11 @@ const LoginPage = () => {
   }
   return (
     <Container>
-      <img src={Logo} width={300} height={80} />
+      <img src={Logo} width={300} height={80} style={{ marginLeft: "250px" }} />
+      <ContainerImage />
       <LoginWrapper>
+        <LoginTitle>Registre-se e Começe já</LoginTitle>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <LoginTitle>Seja bem-vindo(a)</LoginTitle>
           <Input
             placeholder="Nome Completo"
             id="nome"
@@ -71,6 +67,7 @@ const LoginPage = () => {
           <Button
             type="submit"
             text={"Criar Conta"}
+            width={"17vw"}
             click={() => setLoggedIn(true)}
           />
         </Form>

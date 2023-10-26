@@ -5,9 +5,10 @@
   border-radius: 7px;
   border: 1px solid #d0d7de;
   cursor: pointer;
-  margin: 10px;
-  font-size: 16px;
+
+  font-size: 1.1rem;
   font-weight: 500;
+  min-width: 10vw;
   transition: border-color 0.3s;
 }
 

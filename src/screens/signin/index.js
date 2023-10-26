@@ -39,24 +39,26 @@ const LoginPage = () => {
   return (
     <Container>
       <img src={Logo} width={300} height={80} style={{ marginLeft: "10vw" }} />
+      <ContainerImage />
       <LoginWrapper>
         <Form>
-          <LoginTitle>Seja bem-vindo(a)</LoginTitle>
+          <LoginTitle>Seja bem-vindo(a) </LoginTitle>
           <Input placeholder="E-mail" id="email" name="email" />
 
           <Input placeholder="Senha" id="password" name="password" />
-
-          <Button
-            type="submit"
-            text={"Acessar"}
-            click={() => setLoggedIn(true)}
-          />
-          <Button
-            type="submit"
-            text={"Primeiro Acesso"}
-            style={{ width: "300px" }}
-            click={() => navigate("/register")}
-          />
+          <div>
+            <Button
+              type="submit"
+              text={"Acessar"}
+              click={() => setLoggedIn(true)}
+            />
+            <Button
+              type="submit"
+              text={"Primeiro Acesso"}
+              style={{ width: "300px" }}
+              click={() => navigate("/register")}
+            />
+          </div>
         </Form>
       </LoginWrapper>
       <Footer />
