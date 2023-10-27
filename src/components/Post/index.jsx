@@ -5,30 +5,36 @@ import {
   PostContainer,
   HeaderContainer,
   ButtonAction,
-  NameText
+  NameText,
 } from "./styles";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 
 const Post = ({ perfilImage, ImagePost, Text, Name }) => {
   const PerfilImage = styled.div`
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 80px;
     background-image: url(${perfilImage});
     background-size: cover;
     background-position: center;
-    margin-right: 10px;
+    margin-right: 5px;
+    @media (max-width: 600px) {
+      width: 45px;
+      height: 45px;
+    }
   `;
   const ContainerImage = styled.div`
-    width: 450px;
+    width: 480px;
     height: 300px;
     margin-left: 5%;
     border-radius: 4px;
     background-image: url(${ImagePost});
     background-size: cover;
     background-position: center;
-
+    @media (max-width: 600px) {
+      width: 90%;
+    }
   `;
   return (
     <PostContainer>

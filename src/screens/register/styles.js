@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import grad from "../../images/gradient.jpg";
 import image from "../../images/walpapermaos.png";
 export const Container = styled.div`
   height: 100vh;
@@ -11,6 +10,15 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden !important;
+
+  @media (min-width: 1024px) {
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 export const ContainerImage = styled.div`
@@ -22,19 +30,11 @@ export const ContainerImage = styled.div`
   position: absolute;
   z-index: 0;
   top: 12vh;
-`;
-
-export const Backdrop = styled.div`
-  position: absolute;
-
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  z-index: 2;
-  height: 100vh;
-  width: 60vw;
-  background: #19272ecc;
-  opacity: 0.4;
+  @media (max-width: 600px) {
+    top: 18vh;
+    height: 80%;
+    max-height: 70%;
+  }
 `;
 
 export const LoginWrapper = styled.div`
@@ -49,6 +49,11 @@ export const LoginWrapper = styled.div`
   position: relative;
   text-align: center;
   align-items: flex-start;
+
+  @media (max-width: 600px) {
+    margin-top: 0;
+    margin-bottom: 20vh;
+  }
 `;
 
 export const LoginTitle = styled.h1`
@@ -63,7 +68,13 @@ export const LoginTitle = styled.h1`
   align-items: center;
   text-align: center;
   color: #ffff;
-  text-shadow: black 0.1em 0.1em 0.2em}
+  text-shadow: black 0.1em 0.1em 0.2em;
+
+  @media (max-width: 600px) {
+    font-size: 6vw;
+    width: 100%;
+    margin-right: 100px;
+  }
 `;
 
 export const Form = styled.form`
@@ -78,6 +89,11 @@ export const Form = styled.form`
   border: 1px solid #dddd;
   border-radius: 20px;
   text-align: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: 90%;
+  }
 `;
 
 export const Label = styled.label`

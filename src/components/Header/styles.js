@@ -17,6 +17,10 @@ export const ContainerLogo = styled.div`
   width: 10vw;
   height: 100%;
   right: 10%;
+  @media (max-width: 600px) {
+    width: 3vw;
+    right: 2%;
+  }
 `;
 
 export const MenuOption = styled.div`
@@ -35,6 +39,11 @@ export const MenuOption = styled.div`
   padding: 1rem 0;
   :hover {
     color: #04b600;
+  }
+
+  @media (max-width: 600px) {
+    width: 100px;
+    font-size: 0.5rem;
   }
 `;
 

@@ -3,11 +3,11 @@ import { Input as BaseInput } from '@mui/base/Input';
 import { styled } from '@mui/system';
 
 const UInput = React.forwardRef(function CustomInput(props, ref) {
-  return <BaseInput slots={{ input: InputElement }} {...props} ref={ref} />;
+  return <BaseInput slots={{ input: InputElement }} {...props} ref={ref}  />;
 });
 
-export default function Input({placeholder}) {
-  return <UInput aria-label="Demo input" placeholder={placeholder} />;
+export default function Input({placeholder,onChange}) {
+  return <UInput aria-label="Demo input" placeholder={placeholder} onChange={onChange}/>;
 }
 
 const blue = {

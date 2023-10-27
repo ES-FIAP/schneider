@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import grad from "../../images/gradient.jpg";
+import pvw from "../../utils/pixels";
 import image from "../../images/fotomenina.png";
 export const Container = styled.div`
   height: 100vh;
@@ -9,8 +10,15 @@ export const Container = styled.div`
   left: 0;
   z-index: -1;
   display: flex;
-
   overflow: hidden !important;
+
+  @media (min-width: 1024px) {
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContainerImage = styled.div`
@@ -24,19 +32,12 @@ export const ContainerImage = styled.div`
   opacity: 0.95;
 
   left: 190px;
-`;
 
-export const Backdrop = styled.div`
-  position: absolute;
-
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  z-index: 2;
-  height: 100vh;
-  width: 60vw;
-  background: #19272ecc;
-  opacity: 0.4;
+  @media (max-width: 600px) {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 `;
 
 export const LoginWrapper = styled.div`
@@ -52,6 +53,11 @@ export const LoginWrapper = styled.div`
   align-items: flex-start;
   margin-left: 30vw;
   text-align: center;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+    width: 100vw;
+  }
 `;
 
 export const LoginTitle = styled.h1`
@@ -65,7 +71,11 @@ export const LoginTitle = styled.h1`
   display: flex;
   align-items: center;
   text-align: center;
+  width: 100%;
   color: #00b332;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Form = styled.form`
@@ -78,6 +88,9 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   text-align: center;
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 `;
 
 export const Label = styled.label`

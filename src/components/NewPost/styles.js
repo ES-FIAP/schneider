@@ -16,6 +16,9 @@ export const PostCreation = styled.div`
   width: 550px;
   margin-bottom: 2vh;
   border-radius: 10px;
+  @media (max-width: 600px) {
+    width: 95%;
+  }
 `;
 
 export const FlexDiv = styled.div`
@@ -28,6 +31,9 @@ export const FlexDiv = styled.div`
 export const textLeft = styled.text`
   text-align: left;
   width: 100%;
+  @media (max-width: 600px) {
+    font-size: 2vw;
+  }
 `;
 
 export const ContainerTextArea = styled.div`
@@ -42,6 +48,11 @@ export const ContainerTextArea = styled.div`
   width: 95%;
   text-align: left;
   cursor: pointer;
+  @media (max-width: 600px) {
+    width: 90%;
+    padding: 5px;
+    margin: 15px;
+  }
 `;
 
 export const PostOptions = styled.div`
@@ -50,6 +61,9 @@ export const PostOptions = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const PostOptionButton = styled.button`
@@ -65,6 +79,10 @@ export const PostOptionButton = styled.button`
   align-items: center;
   color: #00b8ff;
   background-color: transparent;
+  @media (max-width: 600px) {
+    width: 30%;
+    font-size: 2.5vw;
+  }
 `;
 
 export const ImgContainer = styled.div`
@@ -74,4 +92,9 @@ export const ImgContainer = styled.div`
   background-image: url("https://media.istockphoto.com/id/1367421610/pt/foto/view-of-young-man-using-a-smartphone-at-night-time-with-city-view-landscape-in-the-background.jpg?s=612x612&w=0&k=20&c=8LBMiPA1n2ycEUXUr_UVUSBPAppf5Y5UXJuybHb62DU=");
   background-size: cover;
   background-position: center;
+  @media (max-width: 600px) {
+    width: 45px;
+    height: 45px;
+    border-radius: 90px;
+  }
 `;

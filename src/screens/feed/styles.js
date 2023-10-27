@@ -10,6 +10,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   min-height: 90vh;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 export const ContainerPage = styled.div`
   background: #f1f5f9;
@@ -21,11 +25,19 @@ export const ContainerPosts = styled.div`
   flex-direction: column;
   width: 550px;
   margin-right: 50px;
+  @media (max-width: 600px) {
+    margin-right: 0px;
+    width: 95%;
+  }
 `;
 export const ContainerRight = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  @media (max-width: 600px) {
+    display: none;
+    height: 0px;
+  }
 `;
 export const Card = styled.div`
   width: 300px;

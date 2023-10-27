@@ -6,7 +6,6 @@ import {
   Container,
   LoginWrapper,
   ContainerImage,
-  Backdrop,
   LoginTitle,
   Form,
   Footer,
@@ -28,7 +27,6 @@ const LoginPage = () => {
   });
 
   const onSubmit = () => {
-    console.log("0oi");
     setLoggedIn(true);
   };
 
@@ -38,7 +36,12 @@ const LoginPage = () => {
 
   return (
     <Container>
-      <img src={Logo} width={300} height={80} style={{ marginLeft: "10vw" }} />
+      <img
+        src={Logo}
+        width={300}
+        height={80}
+        styles="max-width: 50%; max-height: 8vh; height: auto; margin-left: 10vw;"
+      />
       <ContainerImage />
       <LoginWrapper>
         <Form>
@@ -55,7 +58,7 @@ const LoginPage = () => {
             <Button
               type="submit"
               text={"Primeiro Acesso"}
-              style={{ width: "300px" }}
+              width={"200px"}
               click={() => navigate("/register")}
             />
           </div>

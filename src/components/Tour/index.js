@@ -26,15 +26,13 @@ class Tour extends React.Component {
     const { currentStep } = this.state;
     const { close } = this.state;
     const { steps } = this.props;
-    console.log(steps.length);
-    console.log(currentStep);
     return (
       <Modal show={!close} onHide={this.closeTour} style={{ top: "100px" }}>
-        <div class="modal-content">
-          <div class="modal-body">
+        <div className="modal-content">
+          <div className="modal-body">
             <p> {steps[currentStep]}</p>
           </div>
-          <div class="modal-footer">
+          <div className="modal-footer">
             <a
               style={{
                 color: "#219bfd",
@@ -48,7 +46,7 @@ class Tour extends React.Component {
             </a>
             <button
               type="button"
-              class="btn btn-primary"
+              className="btn btn-primary"
               style={{ background: "# ", border: "none" }}
               onClick={() =>
                 currentStep >= steps.length ? this.closeTour() : this.nextStep()

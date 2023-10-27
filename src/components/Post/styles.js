@@ -13,6 +13,9 @@ export const PostContainer = styled.div`
   width: 550px;
   padding: 10px;
   margin-bottom: 30px;
+  @media (max-width: 600px) {
+    width: 95%;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -23,12 +26,19 @@ export const HeaderContainer = styled.div`
   position: relative;
   padding: 20px;
   justify-content: space-around;
+  @media (max-width: 600px) {
+    padding: 5px;
+    width: 90%;
+  }
 `;
 
 export const NameText = styled.p`
   font-weight: 500;
   font-size: 1vw;
   color: #4c4c4c;
+  @media (max-width: 600px) {
+    font-size: 4vw;
+  }
 `;
 
 export const Footer = styled.div`
@@ -37,6 +47,8 @@ export const Footer = styled.div`
   justify-content: space-around;
   padding: 10px;
   width: 100%;
+  border-top: 1px solid #d0d7de;
+  margin-top: 15px;
 `;
 
 export const ContainerText = styled.div`

@@ -1,74 +1,97 @@
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   LoginWrapper,
   ContainerImage,
-  Backdrop,
   LoginTitle,
   Form,
   Footer,
 } from "./styles";
 import Button from "../../components/button";
 import Input from "../../components/Input";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Logo from "../../images/logo-SE.jpeg";
+import axios from "axios";
+import { detectar_mobile } from "../../utils/index";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const schema = yup.object().shape({
-    email: yup.string().email("Email inválido").required("Campo obrigatório"),
-    password: yup.string().required("Campo obrigatório"),
-    cellphone: yup.number().positive().integer().min(8),
-  });
-  const [loggedIn, setLoggedIn] = useState(false);
-  const { register, handleSubmit, errors } = useForm({
-    resolver: yupResolver(schema),
-  });
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [cell, setCellphone] = useState("");
+  const [mobile, setMobile] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
-    setLoggedIn(true);
+  useEffect(() => {
+    setMobile(detectar_mobile());
+  }, []);
+
+  const onSubmit = async () => {
+    const data = {
+      nome: name,
+      celular: "+55" + cell,
+    };
+    var dados = JSON.stringify(data);
     navigate("/feed");
+    try {
+      const response = await axios.post(
+        "https://pedroscardua.app.n8n.cloud/webhook/fiap-pedro-greenhub",
+        dados
+      );
+
+      console.log("post", response);
+    } catch (error) {
+      console.log("error", error);
+    }
   };
 
-  if (loggedIn) {
-    return navigate("/feed");
-  }
   return (
     <Container>
-      <img src={Logo} width={300} height={80} style={{ marginLeft: "250px" }} />
+      {mobile ? (
+        <img src={Logo} width={"100%"} height={"12%"} resource="cover" />
+      ) : (
+        <img
+          src={Logo}
+          width={300}
+          height={80}
+          styles="max-width: 50vw; max-height: 10vh;margin-left: 10vw;"
+        />
+      )}
+
       <ContainerImage />
       <LoginWrapper>
         <LoginTitle>Registre-se e Começe já</LoginTitle>
-        <Form onSubmit={handleSubmit(onSubmit)}>
+        <Form>
           <Input
             placeholder="Nome Completo"
             id="nome"
             name="nome"
-            ref={register}
+            onChange={(e) => setName(e.target.value)}
           />
           <Input
             placeholder="Celular"
             id="cellphone"
             name="cellphone"
-            ref={register}
+            onChange={(e) => setCellphone(e.target.value)}
           />
-          <Input placeholder="E-mail" id="email" name="email" ref={register} />
+          <Input
+            placeholder="E-mail"
+            id="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <Input
             placeholder="Senha"
             id="password"
             name="password"
-            ref={register}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <Button
             type="submit"
             text={"Criar Conta"}
             width={"17vw"}
-            click={() => setLoggedIn(true)}
+            click={() => onSubmit()}
           />
         </Form>
       </LoginWrapper>

@@ -5,14 +5,23 @@
   border-radius: 7px;
   border: 1px solid #d0d7de;
   cursor: pointer;
-
+  margin: 2px;
   font-size: 1.1rem;
   font-weight: 500;
-  min-width: 10vw;
+  min-width: 7vw;
   transition: border-color 0.3s;
 }
 
 .button:hover {
   border-color: #00b332;
   background-color: #ffffff;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  .button {
+    font-size: 1rem; /* Reduzir o tamanho do texto */
+    padding: 8px 16px; /* Reduzir o preenchimento */
+    min-width: 40%; /* Reduzir a largura mínima */
+  }
 }

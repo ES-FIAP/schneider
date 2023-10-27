@@ -96,7 +96,7 @@ const Feed = () => {
               "https://media.istockphoto.com/id/1289220545/pt/foto/beautiful-woman-smiling-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=J8IOft88XNXaMMjGBZUbbUVPPiDkxXO2uX5lxuWFRbM="
             }
             Text={
-              "Mostrei o jogo coleta seletiva para meu filho, ele amou e conseguiu acerta 2. em breve ele acertará todos. Muito Orgulho"
+              "Neste sábado participei do Movimento Lixo zero do atados, um trabalho voluntário incrível que visa recolher lixo de beira de rios."
             }
             ImagePost={
               "https://media.istockphoto.com/id/1139306352/pt/foto/volunteers-collecting-garbage.jpg?s=612x612&w=0&k=20&c=YHM954ZpufTy8BIZDEhiUWA_m1fjmtu1BLbcuFMogHs="
@@ -162,7 +162,6 @@ const Feed = () => {
             />
           </Card>
         </ContainerRight>
-        <Tour steps={tutorialSteps} />
       </Container>
     </ContainerPage>
   );
