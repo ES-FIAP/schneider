@@ -9,38 +9,38 @@ const Header = () => {
     <Container>
       <ContainerLogo />
       <MenuOption onClick={() => Navigate("/feed")}>
-        <i class="bi bi-house" style={{ fontSize: "25px" }} /> Feed
+        <i class="bi bi-house" style={{ fontSize: "20px" }} /> Feed
       </MenuOption>
       <MenuOption onClick={() => Navigate("/game")}>
-        <i class="bi bi-controller" style={{ fontSize: "25px" }} /> Game
+        <i class="bi bi-controller" style={{ fontSize: "20px" }} /> Game
       </MenuOption>
 
       <MenuOption onClick={() => Navigate("/learn")}>
-        <i class="bi bi-book" style={{ fontSize: "25px" }} /> Aprender
+        <i class="bi bi-book" style={{ fontSize: "20px" }} /> Aprender
       </MenuOption>
 
       <MenuOption onClick={() => Navigate("/profile")}>
         {" "}
         <i
           class="bi bi-person-circle"
-          style={{ fontSize: "5vw" }}
+          style={{ fontSize: "20px" }}
         /> Perfil{" "}
       </MenuOption>
 
           {" "}
           <MenuOption onClick={() => Navigate("/about")}>
-            <i class="bi bi-card-text" style={{ fontSize: "5vw" }} /> Sobre o
+            <i class="bi bi-card-text" style={{ fontSize: "20px" }} /> Sobre o
             projeto
           </MenuOption>
           <a href="https://www.youtube.com/watch?v=YvhKTAwE2-w" target="_blank">
             {" "}
             <MenuOption>
-              <i class="bi bi-play-fill" style={{ fontSize: "5vw" }} /> Video
+              <i class="bi bi-play-fill" style={{ fontSize: "20px" }} /> Video
               Pitch
             </MenuOption>
           </a>
           <MenuOption onClick={() => Navigate("/")}>
-            <i class="bi bi-door-open" style={{ fontSize: "10%" }} /> Sair
+            <i class="bi bi-door-open" style={{ fontSize: "20px" }} /> Sair
           </MenuOption>
     </Container>
   );
