@@ -14,7 +14,7 @@ import Logo from "../../images/logo-SE.jpeg";
 import axios from "axios";
 import { detectar_mobile } from "../../utils/index";
 
-const LoginPage = () => {
+const Register = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -27,16 +27,11 @@ const LoginPage = () => {
   }, []);
 
   const onSubmit = async () => {
-    const data = {
-      nome: name,
-      celular: "+55" + cell,
-    };
-    var dados = JSON.stringify(data);
     navigate("/feed");
     try {
       const response = await axios.post(
         "https://pedroscardua.app.n8n.cloud/webhook/fiap-pedro-greenhub",
-        dados
+        cell
       );
 
       console.log("post", response);
@@ -100,4 +95,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Register;

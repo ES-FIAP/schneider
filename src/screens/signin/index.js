@@ -55,12 +55,6 @@ const LoginPage = () => {
               text={"Acessar"}
               click={() => setLoggedIn(true)}
             />
-            <Button
-              type="submit"
-              text={"Primeiro Acesso"}
-              width={"200px"}
-              click={() => navigate("/register")}
-            />
           </div>
         </Form>
       </LoginWrapper>
