@@ -10,7 +10,7 @@ import {
   Value,
   Wallpaper,
 } from "./styles";
-import foto from "../../images/homem2.jpg";
+import foto from "../../images/homem2.jpg"
 
 const Profile = () => {
   const profile = {
