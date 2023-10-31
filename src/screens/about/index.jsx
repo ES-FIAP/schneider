@@ -2,14 +2,14 @@ import Header from "../../components/Header";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Container, Info ,Video, BoxPerfil, Fundo, Perfil} from "./styles";
-import Nalanda from '../../images/Nalanda.jpg'
-import Julia from '../../images/Julia.jpeg'
-import Israel from '../../images/Israel.jpg'
-import PedroScardua from '../../images/pedro-scardua.jpeg'
-import fundo1 from '../../images/fundo-perfil-1.jpg'
-import fundo2 from '../../images/fundo-perfil-2.jpg'
-import fundo3 from '../../images/fundo-perfil-3.jpg'
-import fundo4 from '../../images/fundo-perfil-4.jpg'
+import Nalanda from '../../images/Nalanda.jpg';
+import Julia from '../../images/Julia.jpeg';
+import Israel from '../../images/Israel.jpg';
+import PedroScardua from '../../images/pedro-scardua.jpeg';
+import fundo1 from '../../images/fundo-perfil-1.jpg';
+import fundo2 from '../../images/fundo-perfil-2.jpg';
+import fundo3 from '../../images/fundo-perfil-3.jpg';
+import fundo4 from '../../images/fundo-perfil-4.jpg';
 const About = () => {
   return (
     <Container>

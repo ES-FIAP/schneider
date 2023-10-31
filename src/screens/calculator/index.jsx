@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import { Favorite, WaterDrop, Forest, Spa, Cloud } from "@mui/icons-material";
 import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
+
 import {
   ResultCard,
   Input,
